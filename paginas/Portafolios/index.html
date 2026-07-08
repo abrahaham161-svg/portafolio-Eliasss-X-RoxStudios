@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eliasss X RoxStudios — Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security. Servicios de bots, webs y servidores personalizados.">
+    <meta property="og:title" content="Eliasss X RoxStudios">
+    <meta property="og:description" content="Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security. ¡Solicita tu servicio!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guns.lol/eliasss.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=1200&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eliasss X RoxStudios">
+    <meta name="twitter:description" content="Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=1200&q=80">
+    <title>Eliasss X RoxStudios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=39">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-bg"></div>
+        <div class="loader-inner">
+            <div class="loader-rings">
+                <div class="loader-ring-outer"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loader-brand">Eliasss <span>X</span> RoxStudios</div>
+            <div class="loader-sub">Portfolio 2026</div>
+            <div class="loader-bar"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+            <div class="loader-pct" id="loaderPct">0%</div>
+            <div class="loader-status"></div>
+            <button class="btn btn-primary" id="loaderEnter" style="margin-top: 24px; padding: 12px 40px; font-size: 0.9rem; opacity: 0; transform: translateY(10px); transition: opacity 0.5s, transform 0.5s; pointer-events: none;" data-i18n="loaderEnter">Entrar</button>
+        </div>
+    </div>
+
+    <div class="scanline"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav>
+        <span class="nav-logo">Eliasss X RoxStudios</span>
+        <ul class="nav-links">
+            <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
+            <li><a href="#studio" data-i18n="navStudio">Rox Studios</a></li>
+            <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
+            <li><a href="#servicios" data-i18n="navServices">Servicios</a></li>
+            <li><a href="#about" data-i18n="navContact">Contacto</a></li>
+            <li><a href="#" id="langToggle" class="lang-toggle">EN</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <div style="height: 20px;"></div>
+
+        <section class="hero" id="home">
+            <div class="hero-avatar-wrapper reveal">
+                <div class="hero-avatar-ring"></div>
+                <div class="hero-avatar-ring2"></div>
+                <img class="hero-avatar" src="https://gifdb.com/images/branded/high/andrew-garfield-spiderman-smiling-showing-teeth-ifnl5uxr21r3hmmh.gif" alt="Eliasss">
+            </div>
+            <h1 class="reveal text-glitch" data-text="Eliasss X RoxStudios">Eliasss X RoxStudios</h1>
+            <p class="reveal" data-i18n="heroDesc">Fundador de Rox Studios &bull; Desarrollador de bots de Discord &bull; Desarrollo web &bull; Seguridad y automatización</p>
+            <div class="tech-stack reveal">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">discord.js v14</span>
+                <span class="tech-item">HTML/CSS</span>
+            </div>
+            <div class="hero-buttons reveal">
+                <a href="#studio" class="btn btn-primary" data-i18n="heroBots"><i class="fa-solid fa-robot"></i> Ver Bots</a>
+                <a href="#servicios" class="btn btn-outline" data-i18n="heroServices"><i class="fa-solid fa-briefcase"></i> Servicios</a>
+            </div>
+        </section>
+
+        <div style="height: 120px;"></div>
+
+        <section id="stats">
+            <div class="stats-grid">
+                <div class="stat-card reveal-scale">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label" data-i18n="statComands">Comandos</div>
+                </div>
+                <div class="stat-card reveal-scale">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label" data-i18n="statActive">Bot Activo</div>
+                </div>
+                <div class="stat-card reveal-scale">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label" data-i18n="statDev">Bots En Desarrollo</div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 120px;"></div>
+
+        <section id="about">
+            <div class="section-title reveal"><i class="fa-solid fa-user"></i> <span data-i18n="aboutTitle">Sobre Mí</span></div>
+            <div class="about-box reveal">
+                <p style="font-size: 1.05rem; line-height: 1.9;" id="aboutText">
+                    Desarrollador de bots de Discord y páginas web con experiencia en <strong>JavaScript</strong> y <strong>HTML</strong>. 
+                    Creador de <strong>Rox Security</strong>, un bot anti-raid con sistema de verificación, 
+                    panel interactivo y más de 23 comandos. Fundador de <strong>Rox Studios</strong>, 
+                    estudio dedicado al desarrollo de soluciones tecnológicas, bots de Discord y páginas web.
+                </p>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,255,200,0.1);">
+                    <div style="font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #00ffc8; margin-bottom: 14px;" data-i18n="contactTitle">
+                        <i class="fa-solid fa-envelope"></i> Contáctame
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="https://discord.com/users/1133066682399739974" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon discord" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-brands fa-discord"></i></div>
+                        <div class="contact-info">
+                            <div class="label" data-i18n="contactDiscord">Discord</div>
+                            <div class="sub">elias2212.</div>
+                        </div>
+                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://www.tiktok.com/@elias.2212" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon tiktok" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-brands fa-tiktok"></i></div>
+                        <div class="contact-info">
+                            <div class="label">TikTok</div>
+                            <div class="sub">@elias.2212</div>
+                        </div>
+                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://www.instagram.com/elias22122012/" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon instagram" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="contact-info">
+                            <div class="label">Instagram</div>
+                            <div class="sub">@elias22122012</div>
+                        </div>
+                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 120px;"></div>
+
+        <section id="studio">
+            <div class="section-title reveal"><i class="fa-solid fa-building"></i> <span data-i18n="studioTitle">Rox Studios Info</span></div>
+            <div class="about-box reveal">
+                <p id="studioText">
+                    <strong>Rox Studios</strong> es un estudio de desarrollo fundado por <strong>Eliasss</strong>, 
+                    especializado en la creación de bots de Discord y páginas web con enfoque en <strong>seguridad</strong>, 
+                    <strong>moderación</strong> y <strong>automatización</strong>. Nuestro objetivo es optimizar 
+                    la administración de comunidades mediante herramientas modernas, eficientes e intuitivas.
+                </p>
+                <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(0,255,200,0.1);">
+                    <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #00ffc8; margin-bottom: 20px; text-shadow: 0 0 20px rgba(0,255,200,0.2);" data-i18n="botsTitle">
+                        <i class="fa-solid fa-robot"></i> Bots Oficiales
+                    </h3>
+                    <div class="bots-grid">
+                        <div class="bot-card reveal-left" style="background: rgba(0,15,25,0.4);">
+                            <h3>Rox Security</h3>
+                            <p data-i18n="botSecurity">Sistema anti-raid integral con verificación, moderación avanzada y respaldo automático para tu servidor.</p>
+                            <ul class="bot-features">
+                                <li>Anti-raid automático</li>
+                                <li>Verificación con código</li>
+                                <li>23 comandos slash</li>
+                                <li>Panel interactivo</li>
+                                <li>Sistema de backup</li>
+                                <li>Whitelist</li>
+                                <li>Lock / Unlock / Nuke</li>
+                                <li>Logs de eventos</li>
+                            </ul>
+                            <div class="bot-detail">discord.js v14 &bull; Node.js &bull; Captcha</div>
+                            <span class="bot-tag" style="background: rgba(0,255,100,0.15); color: #66ff99;" data-i18n="botActive">Activo</span>
+                            <div style="margin-top: 16px;">
+                                <a href="https://guns.lol/eliasss." target="_blank" class="glow-btn" style="padding: 8px 18px; font-size: 0.75rem;"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+                            </div>
+                        </div>
+                        <div class="bot-card reveal-scale" style="background: rgba(0,15,25,0.4);">
+                            <h3>Rox IA</h3>
+                            <p data-i18n="botIA">Bot potenciado por inteligencia artificial con respuestas contextuales y moderación inteligente.</p>
+                            <div class="bot-detail">Python &bull; Node.js</div>
+                            <span class="bot-tag" data-i18n="botSoon">Proximamente</span>
+                        </div>
+                        <div class="bot-card reveal-right" style="background: rgba(0,15,25,0.4);">
+                            <h3>Rox Embed</h3>
+                            <p data-i18n="botEmbed">Generador de mensajes embed completamente personalizables de forma rápida y sencilla.</p>
+                            <div class="bot-detail">discord.js v14 &bull; Node.js</div>
+                            <span class="bot-tag" data-i18n="botSoon">Proximamente</span>
+                        </div>
+                        <div class="bot-card reveal-left" style="background: rgba(0,15,25,0.4);">
+                            <h3>Rox Tickets</h3>
+                            <p data-i18n="botTickets">Sistema avanzado de tickets con paneles personalizables, asignación automática y base de datos integrada.</p>
+                            <div class="bot-detail">Python &bull; SQLite</div>
+                            <span class="bot-tag" data-i18n="botSoon">Proximamente</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(0,255,200,0.1);">
+                        <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #00ffc8; margin-bottom: 20px; text-shadow: 0 0 20px rgba(0,255,200,0.2);" data-i18n="teamTitle">
+                            <i class="fa-solid fa-crown"></i> Equipo
+                        </h3>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="https://discord.com/users/1296852323641065517" target="_blank" class="contact-card" style="flex: 2; min-width: 200px; padding: 14px 18px;">
+                                <div class="contact-icon" style="background: rgba(255,200,0,0.15); color: #ffc800;"><i class="fa-solid fa-crown"></i></div>
+                                <div class="contact-info">
+                                <div class="label" data-i18n="coOwner">Co Owner</div>
+                                <div class="sub">Harry_90xd</div>
+                                </div>
+                                <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                            <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 12px;">
+                                <a href="https://discord.gg/TxyfKpuvYC" target="_blank" class="glow-btn" style="padding: 12px 18px; font-size: 0.8rem; justify-content: center;" data-i18n="supportBtn">
+                                    <i class="fa-solid fa-headset"></i> Servidor De Soporte
+                                </a>
+                                <span class="glow-btn disabled" style="padding: 12px 18px; font-size: 0.8rem; justify-content: center; opacity: 0.6; cursor: default; pointer-events: none;">
+                                    <i class="fa-solid fa-globe"></i> <span data-i18n="webBtn">RoxStudios Pagina Web</span> <span class="dev-badge" data-i18n="devBadge">En desarrollo</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div style="height: 120px;"></div>
+        
+        <section id="projects">
+            <div class="section-title reveal"><i class="fa-solid fa-code"></i> <span data-i18n="projectsTitle">Proyectos</span></div>
+            <div class="projects-grid">
+                <div class="project-card reveal-left">
+                    <h3>Rox Studios</h3>
+                    <p data-i18n="projStudio">Estudio especializado en el desarrollo de bots de Discord con enfoque en seguridad, moderación y herramientas para la comunidad.</p>
+                    <a href="#studio" class="project-link" data-i18n="projKnow">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="project-card reveal-scale">
+                    <h3>Kryon IA <span class="dev-badge" data-i18n="devBadge">En desarrollo</span></h3>
+                    <p data-i18n="projKryon">Bot de Discord con inteligencia artificial capaz de responder preguntas, moderar conversaciones y gestionar formularios.</p>
+                </div>
+                <div class="project-card reveal-right">
+                    <h3>Dashboard Web <span class="dev-badge" data-i18n="devBadge">En desarrollo</span></h3>
+                    <p data-i18n="projDash">Panel de control interactivo para la administración y monitoreo de bots de Discord.</p>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 120px;"></div>
+
+        <section id="servicios">
+            <div class="section-title reveal"><i class="fa-solid fa-briefcase"></i> <span data-i18n="servicesTitle">Servicios</span></div>
+
+            <div class="servicios-subtitle reveal" data-i18n="servicesSub">Servicios de Rox Studios</div>
+            <div class="servicios-grid reveal">
+                <div class="servicio-card featured">
+                    <span class="servicio-num" data-i18n="s1Num">Servicio #1</span>
+                    <span class="servicio-name" data-i18n="s1Name">Bot De Discord Personalizado</span>
+                    <p class="servicio-desc" data-i18n="s1Desc">Solicita un bot de Discord totalmente personalizado, diseñado a la medida de tus necesidades y las de tu comunidad.</p>
+                    <span class="servicio-ejemplos" data-i18n="s1Tech">Tecnologías</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">JavaScript</span>
+                        <span class="s-feat">Python</span>
+                    </div>
+                    <span class="servicio-ejemplos" style="margin-top: 6px;" data-i18n="s1Examples">Ejemplos De Funciones</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">Bienvenidas</span>
+                        <span class="s-feat">Inteligencia Artificial</span>
+                        <span class="s-feat">Chat Bot</span>
+                        <span class="s-feat">Anti Raid</span>
+                        <span class="s-feat">Tickets</span>
+                    </div>
+                    <span class="servicio-cta" data-i18n="s1Cta">Desarrollamos cualquier funcionalidad que necesites</span>
+                </div>
+                <div class="servicio-card featured">
+                    <span class="servicio-num" data-i18n="s2Num">Servicio #2</span>
+                    <span class="servicio-name" data-i18n="s2Name">Páginas Web Personalizadas</span>
+                    <p class="servicio-desc" data-i18n="s2Desc">Solicita una página web profesional y completamente personalizada, diseñada para tu marca, comunidad o proyecto.</p>
+                    <span class="servicio-ejemplos" data-i18n="s2Tech">Tecnologías</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">HTML / CSS</span>
+                        <span class="s-feat">JavaScript</span>
+                    </div>
+                    <span class="servicio-ejemplos" style="margin-top: 6px;" data-i18n="s2Designs">Diseños</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">Animaciones</span>
+                        <span class="s-feat">Colores</span>
+                        <span class="s-feat">Gradientes</span>
+                        <span class="s-feat">Efectos visuales</span>
+                        <span class="s-feat">Diseño responsivo</span>
+                        <span class="s-feat">Interfaz moderna</span>
+                    </div>
+                    <span class="servicio-cta" data-i18n="s2Cta">Creamos el sitio web que tengas en mente</span>
+                </div>
+                <div class="servicio-card featured">
+                    <span class="servicio-num" data-i18n="s3Num">Servicio #3</span>
+                    <span class="servicio-name" data-i18n="s3Name">Servidor De Discord Completo</span>
+                    <p class="servicio-desc" data-i18n="s3Desc">Diseño y configuración profesional de servidores de Discord modernos y atractivos, con roles personalizados, decoraciones únicas y una estética adaptada completamente al tema de tu comunidad.</p>
+                    <span class="servicio-ejemplos" data-i18n="s3Includes">Incluye</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">Diseño moderno</span>
+                        <span class="s-feat">Roles personalizados</span>
+                        <span class="s-feat">Canales organizados</span>
+                        <span class="s-feat">Decoración única</span>
+                        <span class="s-feat">Embeds informativos</span>
+                        <span class="s-feat">Uso de bots públicos</span>
+                        <span class="s-feat">Adaptado a tu comunidad</span>
+                    </div>
+                    <span class="servicio-cta" data-i18n="s3Cta">Tu servidor con una imagen profesional y única</span>
+                    <span class="servicio-aviso" data-i18n="s3Notice">* Se requieren permisos de administrador para realizar la configuración</span>
+                    <a href="#solicitar" class="btn btn-primary" style="margin-top: 8px; padding: 12px 56px; font-size: 0.9rem; align-self: flex-end;" data-i18n="s3Price">Precio $20</a>
+                </div>
+                <div class="servicio-card featured">
+                    <span class="servicio-num" data-i18n="s4Num">Servicio #4</span>
+                    <span class="servicio-name" data-i18n="s4Name">Ajustes y Modificaciones</span>
+                    <p class="servicio-desc" data-i18n="s4Desc">¿Solo necesitas un cambio puntual? Agregar una animación a tu web, una función específica a tu bot o ajustar algo en tu servidor. Hasta 5 modificaciones por solicitud, sin contratar el pack completo.</p>
+                    <span class="servicio-ejemplos" data-i18n="s4Examples">Ejemplos de modificaciones</span>
+                    <div class="servicio-features">
+                        <span class="s-feat">Animaciones para web</span>
+                        <span class="s-feat">Funciones para bots</span>
+                        <span class="s-feat">Roles y permisos</span>
+                        <span class="s-feat">Diseño de embeds</span>
+                        <span class="s-feat">Ajustes visuales</span>
+                    </div>
+                    <span class="servicio-cta" data-i18n="s4Cta">Modificaciones rápidas sin complicaciones</span>
+                    <span class="servicio-aviso" data-i18n="s4Notice">* Se requieren permisos de administrador para modificar el servidor de Discord</span>
+                </div>
+            </div>
+
+            <div class="servicio-recordatorio reveal" data-i18n="recordatorio">
+                <i class="fa-solid fa-circle-info"></i> El precio varía según la complejidad del desarrollo
+            </div>
+
+            <div id="solicitar" class="about-box reveal" style="margin-top: 30px;">
+                <div class="servicios-subtitle" style="font-size: 0.85rem; margin-bottom: 20px;" data-i18n="formTitle">Solicita tu servicio</div>
+                    <form id="serviceForm" style="display: flex; flex-direction: column; gap: 16px;" novalidate>
+                    <div class="form-group">
+                        <label style="display: block; font-size: 0.75rem; color: rgba(200,230,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="formGmail">Gmail <span style="color: rgba(200,230,255,0.2); font-weight: 400;">(o llena la otra red social)</span></label>
+                        <input type="email" name="gmail" placeholder="tu@email.com" style="width: 100%; padding: 12px 16px; background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.15); border-radius: 8px; color: #e0e8f0; font-size: 0.85rem; outline: none; transition: border-color 0.3s; font-family: 'Inter', sans-serif;">
+                        <span class="form-error">Campo obligatorio</span>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; font-size: 0.75rem; color: rgba(200,230,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="formSocial">Otra Red Social <span style="color: rgba(200,230,255,0.2); font-weight: 400;">(opcional si ya pusiste Gmail)</span></label>
+                        <input type="text" name="social" placeholder="Ej: discord, instagram, tiktok..." style="width: 100%; padding: 12px 16px; background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.15); border-radius: 8px; color: #e0e8f0; font-size: 0.85rem; outline: none; transition: border-color 0.3s; font-family: 'Inter', sans-serif;">
+                        <span class="form-error">Campo obligatorio</span>
+                        <div id="socialHint" style="font-size: 0.6rem; color: rgba(200,230,255,0.25); margin-top: 4px; line-height: 1.4;" data-i18n="formSocialHint">Puedes dejar tu Gmail o tu usuario de otra red social. No es necesario llenar ambos, solo el que prefieras para que pueda contactarte.</div>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; font-size: 0.75rem; color: rgba(200,230,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="formSelect">Selecciona Un Servicio</label>
+                        <div class="custom-select" data-name="servicio">
+                            <div class="custom-select-trigger">
+                                <span class="custom-select-text">Elige un servicio</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="custom-select-options">
+                                <div class="custom-option" data-value="" data-i18n="formSelectPlaceholder">Elige un servicio</div>
+                                <div class="custom-option" data-value="1">Servicio #1 - Bot Personalizado</div>
+                                <div class="custom-option" data-value="2">Servicio #2 - Páginas Web</div>
+                                <div class="custom-option" data-value="3">Servicio #3 - Servidor Discord</div>
+                                <div class="custom-option" data-value="4">Servicio #4 - Ajustes y Modificaciones</div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="servicio">
+                        <span class="form-error">Selecciona un servicio</span>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; font-size: 0.75rem; color: rgba(200,230,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="formDesc">Descripción Del Proyecto</label>
+                        <textarea name="contenido" rows="3" placeholder="Describe detalladamente lo que necesitas..." style="width: 100%; padding: 12px 16px; background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.15); border-radius: 8px; color: #e0e8f0; font-size: 0.85rem; outline: none; transition: border-color 0.3s; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+                        <span class="form-error">Campo obligatorio</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 28px; font-size: 0.9rem; animation: btnPulse 2s ease-in-out infinite;" data-i18n="formSubmit">
+                        <i class="fa-solid fa-paper-plane"></i> Solicitar Servicio
+                    </button>
+                    <div id="formMsg" style="text-align: center; font-size: 0.8rem; height: 20px; transition: color 0.3s;"></div>
+                    <div id="formResponse" style="text-align: center; font-size: 0.65rem; color: rgba(200,230,255,0.3); letter-spacing: 0.5px; line-height: 1.6;" data-i18n="formResponse">Recibirás mi respuesta a través del medio de contacto que proporcionaste.<br>Si no obtienes respuesta en 24 horas, puedes escribirme por mis redes sociales.</div>
+                </form>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,255,200,0.1); display: flex; flex-direction: column; gap: 12px;">
+                    <a href="https://discord.com/users/1133066682399739974" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon discord" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-brands fa-discord"></i></div>
+                        <div class="contact-info">
+                            <div class="label" data-i18n="contactDiscord">Discord</div>
+                            <div class="sub">elias2212.</div>
+                        </div>
+                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mvega22122012@gmail.com" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon" style="width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; background: rgba(234,67,53,0.15); color: #ea4335;"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-info">
+                            <div class="label" data-i18n="contactGmail">Gmail</div>
+                            <div class="sub">mvega22122012@gmail.com</div>
+                        </div>
+                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="footerInicio" data-i18n="footerInicio">Inicio</a>
+                <a href="#about" data-i18n="footerAbout">Sobre mí</a>
+                <a href="#studio" data-i18n="footerStudio">Rox Studios</a>
+                <a href="#projects" data-i18n="footerProjects">Proyectos</a>
+                <a href="#servicios" data-i18n="footerServices">Servicios</a>
+                <a href="#about" data-i18n="footerContact">Contacto</a>
+            </div>
+            <div class="footer-copy" data-i18n="footerCopy">&copy; Eliasss X RoxStudios 2026 &bull; Page built by Eliasss</div>
+        </footer>
+    </div>
+
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-check">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="check-path" fill="none" d="M14 27l7 7 16-16"/>
+                </svg>
+            </div>
+            <div class="modal-title" data-i18n="modalTitle">Solicitud enviada con éxito</div>
+            <div class="modal-sub" data-i18n="modalSub">Te responderé a la brevedad</div>
+            <button class="btn btn-primary modal-btn" onclick="closeModal()" data-i18n="modalBtn">Entendido</button>
+        </div>
+    </div>
+
+    <script>
+        document.documentElement.classList.add('is-loading');
+
+        const loaderStatusKeys = ['ls1', 'ls2', 'ls3', 'ls4', 'ls5'];
+        let lsIdx = 0;
+        const lsEl = document.querySelector('.loader-status');
+        if (lsEl) {
+            function nextLs() {
+                if (lsIdx < loaderStatusKeys.length) {
+                    const cur = localStorage.getItem('lang') || 'es';
+                    lsEl.textContent = langData[cur][loaderStatusKeys[lsIdx]];
+                    lsIdx++;
+                    setTimeout(nextLs, 700);
+                }
+            }
+            setTimeout(nextLs, 300);
+        }
+
+        const pctEl = document.getElementById('loaderPct');
+        const barFill = document.getElementById('loaderBarFill');
+        const enterBtn = document.getElementById('loaderEnter');
+        let loaderReady = false;
+
+        if (pctEl) {
+            const pctStart = performance.now();
+            const pctDur = 2200;
+            function updatePct() {
+                const elapsed = performance.now() - pctStart;
+                const pct = Math.min(Math.round((elapsed / pctDur) * 100), 100);
+                pctEl.textContent = pct + '%';
+                if (barFill) barFill.style.width = pct + '%';
+                if (pct < 100) {
+                    requestAnimationFrame(updatePct);
+                } else {
+                    loaderReady = true;
+                    if (enterBtn) {
+                        enterBtn.style.opacity = '1';
+                        enterBtn.style.transform = 'translateY(0)';
+                        enterBtn.style.pointerEvents = 'auto';
+                    }
+                }
+            }
+            requestAnimationFrame(updatePct);
+        }
+
+        if (enterBtn) {
+            enterBtn.addEventListener('click', function() {
+                const loader = document.getElementById('loader');
+                if (loader) loader.classList.add('hidden');
+                document.documentElement.classList.remove('is-loading');
+            });
+        }
+
+        setTimeout(() => {
+            if (!loaderReady) {
+                if (pctEl) pctEl.textContent = '100%';
+                if (barFill) barFill.style.width = '100%';
+                loaderReady = true;
+                if (enterBtn) {
+                    enterBtn.style.opacity = '1';
+                    enterBtn.style.transform = 'translateY(0)';
+                    enterBtn.style.pointerEvents = 'auto';
+                }
+            }
+        }, 4000);
+
+        function openModal() {
+            const modal = document.getElementById('successModal');
+            if (!modal) return;
+            document.body.style.overflow = 'hidden';
+            modal.style.display = 'flex';
+            modal.style.top = window.scrollY + 'px';
+            modal.style.height = window.innerHeight + 'px';
+            setTimeout(() => modal.style.opacity = '1', 10);
+        }
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            if (!modal) return;
+            document.body.style.overflow = '';
+            modal.style.opacity = '0';
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+        const successModal = document.getElementById('successModal');
+        if (successModal) {
+            successModal.addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        const form = document.getElementById('serviceForm');
+        const formMsg = document.getElementById('formMsg');
+        if (form) {
+            function clearErrors() {
+                form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+            }
+            function validateField(input, skip) {
+                if (skip) return true;
+                const group = input.closest('.form-group');
+                if (!group) return true;
+                if (input.type === 'email' && (!input.value.trim() || !input.value.includes('@'))) {
+                    group.classList.add('error'); return false;
+                }
+                if (input.type === 'hidden' && !input.value.trim()) {
+                    group.classList.add('error'); return false;
+                }
+                if (input.tagName === 'TEXTAREA' && !input.value.trim()) {
+                    group.classList.add('error'); return false;
+                }
+                if (input.name === 'social' && !input.value.trim()) {
+                    group.classList.add('error'); return false;
+                }
+                group.classList.remove('error');
+                return true;
+            }
+            function checkContact() {
+                const gmail = form.gmail.value.trim();
+                const social = form.social.value.trim();
+                const hasGmail = gmail && gmail.includes('@');
+                const hasSocial = social.length > 0;
+                const gmailGroup = form.gmail.closest('.form-group');
+                const socialGroup = form.social.closest('.form-group');
+                gmailGroup?.classList.remove('error');
+                socialGroup?.classList.remove('error');
+                if (!hasGmail && !hasSocial) {
+                    gmailGroup?.classList.add('error');
+                    socialGroup?.classList.add('error');
+                    return false;
+                }
+                if (!hasGmail && hasSocial) {
+                    gmailGroup?.classList.remove('error');
+                    socialGroup?.classList.remove('error');
+                    return true;
+                }
+                if (hasGmail && !hasSocial) {
+                    gmailGroup?.classList.remove('error');
+                    socialGroup?.classList.remove('error');
+                    return true;
+                }
+                return true;
+            }
+            form.querySelectorAll('input, textarea').forEach(el => {
+                el.addEventListener('input', () => {
+                    if (el.name === 'gmail' || el.name === 'social') {
+                        checkContact();
+                    } else {
+                        validateField(el);
+                    }
+                });
+                el.addEventListener('blur', () => {
+                    if (el.name === 'gmail' || el.name === 'social') {
+                        checkContact();
+                    } else {
+                        validateField(el);
+                    }
+                });
+            });
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                clearErrors();
+                const contactOk = checkContact();
+                const servOk = validateField(this.servicio);
+                const contOk = validateField(this.contenido);
+                if (!contactOk || !servOk || !contOk) return;
+
+                const btn = this.querySelector('button[type="submit"]');
+                const d = langData[currentLang];
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + d.sending;
+                btn.disabled = true;
+                const API_URL = 'http://localhost:3001/api/contact'; // Cambia esto por la URL de Railway
+                fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        gmail: this.gmail.value,
+                        social: this.social.value,
+                        servicio: this.servicio.value,
+                        servicioTexto: document.querySelector('.custom-select-text')?.textContent || '',
+                        contenido: this.contenido.value
+                    })
+                }).then(r => {
+                    if (r.ok) {
+                        this.reset();
+                        form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+                        openModal();
+                    } else {
+                        formMsg.style.color = '#ff4466';
+                        formMsg.textContent = d.errSend;
+                    }
+                }).catch(() => {
+                    formMsg.style.color = '#ff4466';
+                    formMsg.textContent = d.errConn;
+                }).finally(() => {
+                    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ' + d.formSubmit;
+                    btn.disabled = false;
+                    setTimeout(() => { formMsg.textContent = ''; }, 4000);
+                });
+            });
+        }
+
+        document.querySelectorAll('.custom-select').forEach(sel => {
+            const trigger = sel.querySelector('.custom-select-trigger');
+            const options = sel.querySelectorAll('.custom-option');
+            const textEl = sel.querySelector('.custom-select-text');
+            const hidden = sel.parentElement.querySelector('input[name="' + sel.dataset.name + '"]');
+            trigger.addEventListener('click', e => {
+                e.stopPropagation();
+                document.querySelectorAll('.custom-select.open').forEach(s => { if (s !== sel) s.classList.remove('open'); });
+                sel.classList.toggle('open');
+            });
+            options.forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const val = opt.dataset.value;
+                    textEl.textContent = opt.textContent;
+                    if (hidden) { hidden.value = val; }
+                    if (val) sel.classList.add('selected'); else sel.classList.remove('selected');
+                    sel.classList.remove('open');
+                    sel.closest('.form-group')?.classList.remove('error');
+                });
+            });
+        });
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.custom-select.open').forEach(s => s.classList.remove('open'));
+        });
+
+        const container = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = (Math.random() * 12 + 10) + 's';
+            p.style.animationDelay = Math.random() * 12 + 's';
+            p.style.width = (Math.random() * 3 + 1) + 'px';
+            p.style.height = p.style.width;
+            container.appendChild(p);
+        }
+
+        document.getElementById('footerInicio')?.addEventListener('click', e => {
+            e.preventDefault();
+            const loader = document.getElementById('loader');
+            document.documentElement.classList.add('is-loading');
+            if (loader) loader.classList.remove('hidden');
+            if (enterBtn) {
+                enterBtn.style.opacity = '0';
+                enterBtn.style.transform = 'translateY(10px)';
+                enterBtn.style.pointerEvents = 'none';
+            }
+            loaderReady = false;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (pctEl) { pctEl.textContent = '0%'; }
+            if (barFill) { barFill.style.width = '0%'; }
+            const pctStart = performance.now();
+            const pctDur = 2200;
+            function restartPct() {
+                const elapsed = performance.now() - pctStart;
+                const pct = Math.min(Math.round((elapsed / pctDur) * 100), 100);
+                if (pctEl) pctEl.textContent = pct + '%';
+                if (barFill) barFill.style.width = pct + '%';
+                if (pct < 100) {
+                    requestAnimationFrame(restartPct);
+                } else {
+                    loaderReady = true;
+                    if (enterBtn) {
+                        enterBtn.style.opacity = '1';
+                        enterBtn.style.transform = 'translateY(0)';
+                        enterBtn.style.pointerEvents = 'auto';
+                    }
+                }
+            }
+            requestAnimationFrame(restartPct);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href').slice(1);
+                if (!id) return;
+                const el = document.getElementById(id);
+                if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+            observer.observe(el);
+        });
+
+        const langData = {
+            es: {
+                navAbout: 'Sobre mí', navStudio: 'Rox Studios', navProjects: 'Proyectos',
+                navServices: 'Servicios', navContact: 'Contacto',
+                heroDesc: 'Fundador de Rox Studios • Desarrollador de bots de Discord • Desarrollo web • Seguridad y automatización',
+                heroBots: 'Ver Bots', heroServices: 'Servicios',
+                statComands: 'Comandos', statActive: 'Bot Activo', statDev: 'Bots En Desarrollo',
+                aboutTitle: 'Sobre Mí',                 aboutText: 'Desarrollador de bots de Discord y páginas web con experiencia en <strong>JavaScript</strong> y <strong>HTML</strong>. Creador de <strong>Rox Security</strong>, un bot anti-raid con sistema de verificación, panel interactivo y más de 23 comandos. Fundador de <strong>Rox Studios</strong>, estudio dedicado al desarrollo de soluciones tecnológicas, bots de Discord y páginas web.',
+                contactTitle: 'Contáctame',
+                studioTitle: 'Rox Studios Info',                 studioText: '<strong>Rox Studios</strong> es un estudio de desarrollo fundado por <strong>Eliasss</strong>, especializado en la creación de bots de Discord y páginas web con enfoque en <strong>seguridad</strong>, <strong>moderación</strong> y <strong>automatización</strong>. Nuestro objetivo es optimizar la administración de comunidades mediante herramientas modernas, eficientes e intuitivas.',
+                botsTitle: 'Bots Oficiales', botSecurity: 'Sistema anti-raid integral con verificación, moderación avanzada y respaldo automático para tu servidor.',
+                botIA: 'Bot potenciado por inteligencia artificial con respuestas contextuales y moderación inteligente.',
+                botEmbed: 'Generador de mensajes embed completamente personalizables de forma rápida y sencilla.',
+                botTickets: 'Sistema avanzado de tickets con paneles personalizables, asignación automática y base de datos integrada.',
+                botActive: 'Activo', botSoon: 'Proximamente',
+                teamTitle: 'Equipo', coOwner: 'Co Owner',
+                supportBtn: 'Servidor De Soporte', webBtn: 'RoxStudios Pagina Web',
+                devBadge: 'En desarrollo',
+                projectsTitle: 'Proyectos',
+                projStudio: 'Estudio especializado en el desarrollo de bots de Discord con enfoque en seguridad, moderación y herramientas para la comunidad.',
+                projKnow: 'Saber más',
+                projKryon: 'Bot de Discord con inteligencia artificial capaz de responder preguntas, moderar conversaciones y gestionar formularios.',
+                projDash: 'Panel de control interactivo para la administración y monitoreo de bots de Discord.',
+                servicesTitle: 'Servicios', servicesSub: 'Servicios de Rox Studios',
+                s1Num: 'Servicio #1', s1Name: 'Bot De Discord Personalizado',
+                s1Desc: 'Solicita un bot de Discord totalmente personalizado, diseñado a la medida de tus necesidades y las de tu comunidad.',
+                s1Tech: 'Tecnologías', s1Examples: 'Ejemplos De Funciones',
+                s1Cta: 'Desarrollamos cualquier funcionalidad que necesites',
+                s2Num: 'Servicio #2', s2Name: 'Páginas Web Personalizadas',
+                s2Desc: 'Solicita una página web profesional y completamente personalizada, diseñada para tu marca, comunidad o proyecto.',
+                s2Tech: 'Tecnologías', s2Designs: 'Diseños',
+                s2Cta: 'Creamos el sitio web que tengas en mente',
+                s3Num: 'Servicio #3', s3Name: 'Servidor De Discord Completo',
+                s3Desc: 'Diseño y configuración profesional de servidores de Discord modernos y atractivos, con roles personalizados, decoraciones únicas y una estética adaptada completamente al tema de tu comunidad.',
+                s3Includes: 'Incluye', s3Cta: 'Tu servidor con una imagen profesional y única',
+                s3Notice: '* Se requieren permisos de administrador para realizar la configuración',
+                s3Price: 'Precio $20',
+                s4Num: 'Servicio #4', s4Name: 'Ajustes y Modificaciones',
+                s4Desc: '¿Solo necesitas un cambio puntual? Agregar una animación a tu web, una función específica a tu bot o ajustar algo en tu servidor. Hasta 5 modificaciones por solicitud, sin contratar el pack completo.',
+                s4Examples: 'Ejemplos de modificaciones', s4Cta: 'Modificaciones rápidas sin complicaciones',
+                s4Notice: '* Se requieren permisos de administrador para modificar el servidor de Discord',
+                recordatorio: 'El precio varía según la complejidad del desarrollo',
+                formTitle: 'Solicita tu servicio', formGmail: 'Gmail (o llena la otra red social)',
+                formSocial: 'Otra Red Social (opcional si ya pusiste Gmail)',
+                formSocialHint: 'Puedes dejar tu Gmail o tu usuario de otra red social. No es necesario llenar ambos, solo el que prefieras para que pueda contactarte.',
+                formSelect: 'Selecciona Un Servicio', formSelectPlaceholder: 'Elige un servicio',
+                formDesc: 'Descripción Del Proyecto',
+                formSubmit: 'Solicitar Servicio',
+                formResponse: 'Recibirás mi respuesta a través del medio de contacto que proporcionaste.<br>Si no obtienes respuesta en 24 horas, puedes escribirme por mis redes sociales.',
+                footerInicio: 'Inicio', footerAbout: 'Sobre mí', footerStudio: 'Rox Studios',
+                footerProjects: 'Proyectos', footerServices: 'Servicios', footerContact: 'Contacto',
+                footerCopy: 'Page built by Eliasss',
+                modalTitle: 'Solicitud enviada con éxito', modalSub: 'Te responderé a la brevedad',
+                modalBtn: 'Entendido',
+                loaderEnter: 'Entrar',
+                contactDiscord: 'Discord', contactGmail: 'Gmail',
+                errRequired: 'Campo obligatorio', errSelect: 'Selecciona un servicio',
+                opt1: 'Servicio #1 - Bot Personalizado', opt2: 'Servicio #2 - Páginas Web',
+                opt3: 'Servicio #3 - Servidor Discord', opt4: 'Servicio #4 - Ajustes y Modificaciones',
+                ls1: 'Inicializando sistemas', ls2: 'Cargando módulos', ls3: 'Estableciendo conexión',
+                ls4: 'Preparando interfaz', ls5: 'Bienvenido',
+                phGmail: 'tu@email.com', phSocial: 'Ej: discord, instagram, tiktok...',
+                phDesc: 'Describe detalladamente lo que necesitas...',
+                sending: 'Enviando...', errSend: 'Error al enviar', errConn: 'Error de conexion'
+            },
+            en: {
+                navAbout: 'About Me', navStudio: 'Rox Studios', navProjects: 'Projects',
+                navServices: 'Services', navContact: 'Contact',
+                heroDesc: 'Founder of Rox Studios • Discord Bot Developer • Web Developer • Security & Automation',
+                heroBots: 'View Bots', heroServices: 'Services',
+                statComands: 'Commands', statActive: 'Active Bot', statDev: 'Bots In Development',
+                aboutTitle: 'About Me',                 aboutText: 'I\'m a Discord bot & web developer with experience in <strong>JavaScript</strong> and <strong>HTML</strong>. I built <strong>Rox Security</strong>, an anti-raid bot with a verification system, an interactive dashboard, and over 23 commands. I\'m also the founder of <strong>Rox Studios</strong>, a development studio focused on building tech solutions, Discord bots, and websites.',
+                contactTitle: 'Contact Me',
+                studioTitle: 'Rox Studios Info',                 studioText: '<strong>Rox Studios</strong> is a dev studio founded by <strong>Eliasss</strong> that specializes in building Discord bots and websites with a strong focus on <strong>security</strong>, <strong>moderation</strong>, and <strong>automation</strong>. Our goal? Make community management easier with modern, efficient, and user-friendly tools.',
+                botsTitle: 'Official Bots', botSecurity: 'A full-featured anti-raid system with user verification, advanced moderation, and automatic backups for your server.',
+                botIA: 'An AI-powered bot that delivers contextual responses and smart moderation.',
+                botEmbed: 'A fast, easy-to-use embed message generator that\'s fully customizable.',
+                botTickets: 'A powerful ticket system with customizable panels, auto-assignment, and an integrated database.',
+                botActive: 'Active', botSoon: 'Coming Soon',
+                teamTitle: 'Team', coOwner: 'Co-Owner',
+                supportBtn: 'Support Server', webBtn: 'RoxStudios Website',
+                devBadge: 'In Development',
+                projectsTitle: 'Projects',
+                projStudio: 'A studio that specializes in building Discord bots with a focus on security, moderation, and tools for the community.',
+                projKnow: 'Learn More',
+                projKryon: 'A Discord bot powered by AI that can answer questions, moderate conversations, and handle forms.',
+                projDash: 'An interactive dashboard for managing and monitoring your Discord bots.',
+                servicesTitle: 'Services', servicesSub: 'Rox Studios Services',
+                s1Num: 'Service #1', s1Name: 'Custom Discord Bot',
+                s1Desc: 'Order a fully custom Discord bot built from scratch to fit your community\'s exact needs.',
+                s1Tech: 'Technologies', s1Examples: 'Feature Examples',
+                s1Cta: 'We\'ll build whatever functionality you need',
+                s2Num: 'Service #2', s2Name: 'Custom Websites',
+                s2Desc: 'Get a professional, fully custom website designed for your brand, community, or project.',
+                s2Tech: 'Technologies', s2Designs: 'Designs',
+                s2Cta: 'We\'ll bring the website you\'re dreaming of to life',
+                s3Num: 'Service #3', s3Name: 'Complete Discord Server',
+                s3Desc: 'Professional setup of modern, good-looking Discord servers with custom roles, unique decorations, and a style that matches your community\'s vibe.',
+                s3Includes: 'Includes', s3Cta: 'Give your server a clean, professional look',
+                s3Notice: '* Admin permissions are required to set this up',
+                s3Price: 'Price $20',
+                s4Num: 'Service #4', s4Name: 'Adjustments & Modifications',
+                s4Desc: 'Need a quick change? Whether it\'s adding an animation to your site, a new feature to your bot, or tweaking something on your server — up to 5 changes per request, no need to buy the full package.',
+                s4Examples: 'Modification Examples', s4Cta: 'Quick tweaks, zero hassle',
+                s4Notice: '* Admin permissions are required to modify the Discord server',
+                recordatorio: 'Price depends on how complex the project is',
+                formTitle: 'Request Your Service', formGmail: 'Gmail (or drop your other social media)',
+                formSocial: 'Other Social Media (only if you didn\'t put Gmail)',
+                formSocialHint: 'You can leave your Gmail or any other social media username. You don\'t need to fill in both — just pick whichever you prefer so I can reach out to you.',
+                formSelect: 'Select A Service', formSelectPlaceholder: 'Pick a service',
+                formDesc: 'Project Description',
+                formSubmit: 'Request Service',
+                formResponse: 'I\'ll get back to you through whatever contact method you provided.<br>If you don\'t hear from me within 24 hours, feel free to hit me up on my social media.',
+                footerInicio: 'Home', footerAbout: 'About Me', footerStudio: 'Rox Studios',
+                footerProjects: 'Projects', footerServices: 'Services', footerContact: 'Contact',
+                footerCopy: 'Page built by Eliasss',
+                modalTitle: 'Request submitted successfully!', modalSub: 'I\'ll get back to you as soon as I can',
+                modalBtn: 'Got it',
+                loaderEnter: 'Enter',
+                errRequired: 'This field is required', errSelect: 'Pick a service',
+                contactDiscord: 'Discord', contactGmail: 'Gmail',
+                opt1: 'Service #1 - Custom Bot', opt2: 'Service #2 - Websites',
+                opt3: 'Service #3 - Discord Server', opt4: 'Service #4 - Adjustments & Mods',
+                ls1: 'Starting up systems', ls2: 'Loading modules', ls3: 'Establishing connection',
+                ls4: 'Getting the interface ready', ls5: 'Welcome',
+                phGmail: 'your@email.com', phSocial: 'Example: discord, instagram, tiktok...',
+                phDesc: 'Tell me what you need in detail...',
+                sending: 'Sending...', errSend: 'Error sending', errConn: 'Connection error'
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'es';
+
+        function applyLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            const d = langData[lang];
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (!d[key]) return;
+                const hasIcon = el.querySelector('i');
+                if (hasIcon) {
+                    el.innerHTML = hasIcon.outerHTML + ' ' + d[key];
+                } else {
+                    el.textContent = d[key];
+                }
+            });
+
+            const aboutEl = document.getElementById('aboutText');
+            if (aboutEl) aboutEl.innerHTML = d.aboutText;
+
+            const studioEl = document.getElementById('studioText');
+            if (studioEl) studioEl.innerHTML = d.studioText;
+
+            document.querySelectorAll('.form-error').forEach(el => {
+                const parent = el.closest('.form-group');
+                if (parent) {
+                    const input = parent.querySelector('input, textarea, .custom-select');
+                    if (input) {
+                        if (input.name === 'servicio' || parent.querySelector('[data-name="servicio"]')) {
+                            el.textContent = d.errSelect;
+                        } else {
+                            el.textContent = d.errRequired;
+                        }
+                    }
+                }
+            });
+
+            const lsEl = document.querySelector('.loader-status');
+            if (lsEl && lsIdx > 0 && lsIdx <= loaderStatusKeys.length) {
+                lsEl.textContent = d[loaderStatusKeys[lsIdx - 1]];
+            }
+
+            const formResp = document.getElementById('formResponse');
+            if (formResp) formResp.innerHTML = d.formResponse;
+
+            const gmailInput = form.querySelector('input[name="gmail"]');
+            if (gmailInput) gmailInput.placeholder = d.phGmail;
+            const socialInput = form.querySelector('input[name="social"]');
+            if (socialInput) socialInput.placeholder = d.phSocial;
+            const descTextarea = form.querySelector('textarea[name="contenido"]');
+            if (descTextarea) descTextarea.placeholder = d.phDesc;
+
+            const socialHint = document.getElementById('socialHint');
+            if (socialHint) socialHint.textContent = d.formSocialHint;
+
+            document.querySelectorAll('.custom-option[data-value]').forEach(opt => {
+                const key = 'opt' + opt.dataset.value;
+                if (d[key]) opt.textContent = d[key];
+            });
+            const sel = document.querySelector('.custom-select');
+            const selText = document.querySelector('.custom-select-text');
+            if (sel && selText) {
+                if (sel.classList.contains('selected')) {
+                    const hidden = sel.querySelector('input[type="hidden"]');
+                    const active = sel.querySelector(`.custom-option[data-value="${hidden?.value || ''}"]`);
+                    if (active) selText.textContent = active.textContent;
+                } else {
+                    selText.textContent = d.formSelectPlaceholder;
+                }
+            }
+
+            document.getElementById('langToggle').textContent = lang === 'es' ? 'EN' : 'ES';
+        }
+
+        document.getElementById('langToggle')?.addEventListener('click', e => {
+            e.preventDefault();
+            applyLang(currentLang === 'es' ? 'en' : 'es');
+        });
+
+        applyLang(currentLang);
+    </script>
+</body>
+</html>
