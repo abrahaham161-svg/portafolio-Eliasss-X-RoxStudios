@@ -16,7 +16,7 @@
     <title>Eliasss X RoxStudios</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=39">
+    <link rel="stylesheet" href="styles.css?v=40">
 </head>
 <body>
 
@@ -127,11 +127,11 @@
                         </div>
                         <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
-                    <a href="https://www.instagram.com/elias22122012/" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                    <a href="https://www.instagram.com/eliasss_roxstudios/" target="_blank" class="contact-card" style="padding: 14px 18px;">
                         <div class="contact-icon instagram" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-brands fa-instagram"></i></div>
                         <div class="contact-info">
                             <div class="label">Instagram</div>
-                            <div class="sub">@elias22122012</div>
+                            <div class="sub">@eliasss_roxstudios</div>
                         </div>
                         <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
@@ -172,7 +172,7 @@
                             <div class="bot-detail">discord.js v14 &bull; Node.js &bull; Captcha</div>
                             <span class="bot-tag" style="background: rgba(0,255,100,0.15); color: #66ff99;" data-i18n="botActive">Activo</span>
                             <div style="margin-top: 16px;">
-                                <a href="https://guns.lol/eliasss." target="_blank" class="glow-btn" style="padding: 8px 18px; font-size: 0.75rem;"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+                                <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;font-size:0.75rem;border-radius:8px;border:1px solid rgba(0,255,200,0.1);background:rgba(0,15,25,0.3);color:rgba(200,230,255,0.3);cursor:not-allowed;font-family:'Inter',sans-serif;"><i class="fa-solid fa-gauge-high"></i> Dashboard <span style="font-size:0.5rem;background:rgba(255,200,0,0.15);color:#ffcc00;padding:2px 6px;border-radius:4px;letter-spacing:0.5px;">En Desarrollo</span></div>
                             </div>
                         </div>
                         <div class="bot-card reveal-scale" style="background: rgba(0,15,25,0.4);">
@@ -350,10 +350,10 @@
                             </div>
                             <div class="custom-select-options">
                                 <div class="custom-option" data-value="" data-i18n="formSelectPlaceholder">Elige un servicio</div>
-                                <div class="custom-option" data-value="1">Servicio #1 - Bot Personalizado</div>
-                                <div class="custom-option" data-value="2">Servicio #2 - Páginas Web</div>
-                                <div class="custom-option" data-value="3">Servicio #3 - Servidor Discord</div>
-                                <div class="custom-option" data-value="4">Servicio #4 - Ajustes y Modificaciones</div>
+                                <div class="custom-option" data-value="1"><i class="fa-solid fa-robot"></i> Servicio #1 - Bot Personalizado</div>
+                                <div class="custom-option" data-value="2"><i class="fa-solid fa-code"></i> Servicio #2 - Páginas Web</div>
+                                <div class="custom-option" data-value="3"><i class="fa-solid fa-shield"></i> Servicio #3 - Servidor Discord</div>
+                                <div class="custom-option" data-value="4"><i class="fa-solid fa-wrench"></i> Servicio #4 - Ajustes y Modificaciones</div>
                             </div>
                         </div>
                         <input type="hidden" name="servicio">
@@ -384,13 +384,12 @@
                         </div>
                         <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mvega22122012@gmail.com" target="_blank" class="contact-card" style="padding: 14px 18px;">
-                        <div class="contact-icon" style="width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; background: rgba(234,67,53,0.15); color: #ea4335;"><i class="fa-solid fa-envelope"></i></div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=roxstudios452@gmail.com" target="_blank" class="contact-card" style="padding: 14px 18px;">
+                        <div class="contact-icon email" style="width: 44px; height: 44px; font-size: 1.3rem;"><i class="fa-solid fa-envelope"></i></div>
                         <div class="contact-info">
                             <div class="label" data-i18n="contactGmail">Gmail</div>
-                            <div class="sub">mvega22122012@gmail.com</div>
+                            <div class="sub">roxstudios452@gmail.com</div>
                         </div>
-                        <span class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
                 </div>
             </div>
@@ -406,9 +405,18 @@
                 <a href="#about" data-i18n="footerContact">Contacto</a>
             </div>
             <div class="footer-copy" data-i18n="footerCopy">&copy; Eliasss X RoxStudios 2026 &bull; Page built by Eliasss</div>
-            <button id="adminBtn" style="background: none; border: none; color: rgba(0,255,200,0.15); font-size: 0.7rem; cursor: pointer; margin-top: 8px; transition: color 0.3s;" onmouseover="this.style.color='rgba(0,255,200,0.5)'" onmouseout="this.style.color='rgba(0,255,200,0.15)'"><i class="fa-solid fa-lock"></i></button>
         </footer>
     </div>
+
+    <button id="scrollTopBtn" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <button id="reviewsBtn" aria-label="Reseñas">
+        <i class="fa-solid fa-star"></i>
+    </button>
+    <button id="adminFloatBtn" aria-label="Panel Admin">
+        <i class="fa-solid fa-lock"></i>
+    </button>
 
     <div id="successModal" class="modal-overlay">
         <div class="modal-box">
@@ -424,57 +432,111 @@
         </div>
     </div>
 
-    <div id="adminModal" class="modal-overlay" style="z-index: 999999;">
-        <div class="modal-box" style="max-width: 800px; width: 95%; max-height: 85vh; display: flex; flex-direction: column; text-align: left; padding: 0;">
+    <div id="adminPage">
+        <div class="admin-page-inner" id="adminPageInner">
+            <div class="admin-header">
+                <button id="adminBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+                <div class="admin-title"><i class="fa-solid fa-lock"></i> Panel Admin</div>
+            </div>
             <!-- Login -->
-            <div id="adminLogin" style="padding: 30px;">
-                <div style="font-size: 0.8rem; font-weight: 700; color: #00ffc8; margin-bottom: 14px; letter-spacing: 2px; text-transform: uppercase;"><i class="fa-solid fa-lock"></i> Panel Admin</div>
-                <input type="password" id="adminPwd" placeholder="Contraseña..." style="width: 100%; padding: 12px 16px; background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.15); border-radius: 8px; color: #e0e8f0; font-size: 0.85rem; outline: none; font-family: 'Inter', sans-serif; margin-bottom: 10px;">
-                <div id="adminPwdError" style="font-size: 0.65rem; color: #ff4466; margin-bottom: 8px; display: none;">Contraseña incorrecta</div>
-                <button id="adminLoginBtn" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.85rem;">Entrar</button>
+            <div id="adminLoginSection">
+                <div class="admin-login-box">
+                    <div class="admin-login-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="admin-login-title" data-i18n="adminLoginTitle">Acceso Administrativo</div>
+                    <input type="password" id="adminPwd" placeholder="Contraseña..." autocomplete="off">
+                    <div id="adminPwdError">Contraseña incorrecta</div>
+                    <button id="adminLoginBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:1rem;"><i class="fa-solid fa-key"></i> Entrar</button>
+                </div>
             </div>
             <!-- Panel -->
-            <div id="adminPanel" style="display: none; flex-direction: column; overflow: hidden; flex: 1;">
-                <!-- Header -->
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid rgba(0,255,200,0.08);">
-                    <div style="font-size: 0.8rem; font-weight: 700; color: #00ffc8; letter-spacing: 2px; text-transform: uppercase;"><i class="fa-solid fa-chart-simple"></i> Panel Admin</div>
-                    <button id="adminLogout" style="background: none; border: none; color: rgba(200,230,255,0.4); font-size: 0.7rem; cursor: pointer; text-decoration: underline;">Salir</button>
-                </div>
+            <div id="adminPanelSection" style="display:none;">
                 <!-- Stats -->
-                <div id="adminStats" style="display: flex; gap: 10px; padding: 16px 20px;"></div>
+                <div id="adminStats"></div>
                 <!-- Tabs -->
-                <div style="display: flex; border-bottom: 1px solid rgba(0,255,200,0.08); padding: 0 20px;">
-                    <button class="admin-tab active" data-tab="subs" style="flex:1;padding:10px;font-size:0.7rem;background:none;border:none;border-bottom:2px solid #00ffc8;color:#00ffc8;cursor:pointer;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-family:'Inter',sans-serif;"><i class="fa-solid fa-envelope"></i> Solicitudes</button>
-                    <button class="admin-tab" data-tab="views" style="flex:1;padding:10px;font-size:0.7rem;background:none;border:none;border-bottom:2px solid transparent;color:rgba(200,230,255,0.4);cursor:pointer;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-family:'Inter',sans-serif;"><i class="fa-solid fa-eye"></i> Vistas</button>
-                    <button class="admin-tab" data-tab="blocked" style="flex:1;padding:10px;font-size:0.7rem;background:none;border:none;border-bottom:2px solid transparent;color:rgba(200,230,255,0.4);cursor:pointer;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-family:'Inter',sans-serif;"><i class="fa-solid fa-ban"></i> Bloqueadas</button>
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="subs"><i class="fa-solid fa-envelope"></i> Solicitudes</button>
+                    <button class="admin-tab" data-tab="views"><i class="fa-solid fa-eye"></i> Vistas</button>
+                    <button class="admin-tab" data-tab="blocked"><i class="fa-solid fa-ban"></i> Bloqueadas</button>
+                    <button class="admin-tab" data-tab="reviews"><i class="fa-solid fa-star"></i> Valoraciones</button>
                 </div>
                 <!-- Tab: Subs -->
-                <div id="adminTabSubs" class="admin-tab-content" style="padding:16px 20px;overflow-y:auto;flex:1;">
-                    <div style="display:flex;gap:8px;margin-bottom:12px;">
-                        <input type="text" id="adminSearch" placeholder="Buscar por gmail, red social, servicio..." style="flex:1;padding:8px 12px;background:rgba(0,15,25,0.5);border:1px solid rgba(0,255,200,0.15);border-radius:6px;color:#e0e8f0;font-size:0.75rem;outline:none;font-family:'Inter',sans-serif;">
+                <div id="adminTabSubs" class="admin-tab-content">
+                    <div class="admin-search-wrap">
+                        <input type="text" id="adminSearch" placeholder="Buscar por gmail, red social, servicio...">
                     </div>
-                    <div id="adminSubs" style="font-size: 0.7rem; color: rgba(200,230,255,0.6);"></div>
-                    <div id="adminSubsPagination" style="display:flex;justify-content:center;gap:8px;margin-top:12px;"></div>
+                    <div id="adminSubs"></div>
+                    <div id="adminSubsPagination"></div>
                 </div>
                 <!-- Tab: Views -->
-                <div id="adminTabViews" class="admin-tab-content" style="display:none;padding:16px 20px;overflow-y:auto;flex:1;">
-                    <div id="adminChart" style="margin-bottom:16px;"></div>
-                    <div id="adminViews" style="font-size: 0.65rem; color: rgba(200,230,255,0.5);"></div>
+                <div id="adminTabViews" class="admin-tab-content" style="display:none;">
+                    <div id="adminChart"></div>
+                    <div id="adminViews"></div>
                 </div>
                 <!-- Tab: Blocked -->
-                <div id="adminTabBlocked" class="admin-tab-content" style="display:none;padding:16px 20px;overflow-y:auto;flex:1;">
-                    <div id="adminBlocked" style="font-size: 0.7rem; color: rgba(200,230,255,0.6);"></div>
+                <div id="adminTabBlocked" class="admin-tab-content" style="display:none;">
+                    <div id="adminBlocked"></div>
                 </div>
+                <!-- Tab: Reviews -->
+                <div id="adminTabReviews" class="admin-tab-content" style="display:none;">
+                    <div class="admin-review-delete-wrap">
+                        <input type="text" id="adminReviewName" placeholder="Nombre exacto del usuario...">
+                        <button id="adminReviewDeleteBtn"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
+                    </div>
+                    <div id="adminReviewMsg"></div>
+                </div>
+                <!-- Logout -->
+                <button id="adminLogout" class="admin-logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
             </div>
+        </div>
+    </div>
+
+    <div id="reviewsPage">
+        <div class="reviews-page-inner">
+            <div class="reviews-header">
+                <button id="reviewsBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+                <div class="reviews-title">⭐ Valoraciones</div>
+            </div>
+            <div class="reviews-summary" id="reviewsSummary">
+                <div class="reviews-total" id="reviewsTotal">0</div>
+                <div class="reviews-avg" id="reviewsAvg">0.0</div>
+                <div class="reviews-stars-big" id="reviewsStarsBig"></div>
+                <div class="reviews-label">valoraciones</div>
+            </div>
+            <button id="reviewsAddBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;"><i class="fa-solid fa-plus"></i> Agregar opinión</button>
+            <div class="reviews-form" id="reviewsForm" style="display:none;">
+                <input type="text" id="reviewName" placeholder="Tu nombre..." maxlength="30">
+                <div class="review-stars-input" id="reviewStarsInput">
+                    <i class="fa-regular fa-star" data-star="1"></i>
+                    <i class="fa-regular fa-star" data-star="2"></i>
+                    <i class="fa-regular fa-star" data-star="3"></i>
+                    <i class="fa-regular fa-star" data-star="4"></i>
+                    <i class="fa-regular fa-star" data-star="5"></i>
+                </div>
+                <textarea id="reviewText" placeholder="Tu opinión (opcional)..." maxlength="500" rows="2"></textarea>
+                <button id="reviewSubmitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;"><i class="fa-solid fa-paper-plane"></i> Enviar valoración</button>
+                <div id="reviewFormMsg" style="text-align:center;font-size:0.75rem;height:20px;margin-top:6px;"></div>
+                <button id="reviewCancelBtn" style="background:none;border:none;color:rgba(200,230,255,0.3);cursor:pointer;font-size:0.75rem;font-family:'Inter',sans-serif;margin-top:4px;">Cancelar</button>
+            </div>
+            <div class="reviews-list" id="reviewsList"></div>
         </div>
     </div>
 
     <script>
         // --- Config ---
+        const _ = (a,b) => a.map((c,i) => String.fromCharCode(c^(b?.[i]||0))).join('');
+        const __ = String.fromCharCode;
+        const ___ = [82,111,120,69,108,105,97,115,50,50,49,50];
+        const ____ = [65,100,109,105,110,50,50,49,50];
+        const ___a = [65,100,109];
+        const ___b = [105,110];
+        const ___c = [50,50,49,50];
+
         const CONFIG = {
             API_BASE: 'https://rox-security-production.up.railway.app',
             API_URL: 'https://rox-security-production.up.railway.app/api/contact',
-            ADMIN_KEY: 'RoxElias2212'
+            ADMIN_KEY: _(___),
+            // Honeypot
+            SECRET: 'nobody_cares_about_this_1234'
         };
 
         document.documentElement.classList.add('is-loading');
@@ -1073,12 +1135,14 @@
         }
 
         // --- Admin panel ---
-        const adminModal = document.getElementById('adminModal');
-        const adminLogin = document.getElementById('adminLogin');
-        const adminPanel = document.getElementById('adminPanel');
+        const adminPage = document.getElementById('adminPage');
+        const adminPageInner = document.getElementById('adminPageInner');
         const adminPwd = document.getElementById('adminPwd');
         const adminPwdError = document.getElementById('adminPwdError');
         const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const adminLoginSection = document.getElementById('adminLoginSection');
+        const adminPanelSection = document.getElementById('adminPanelSection');
+        const adminBack = document.getElementById('adminBack');
         const adminLogout = document.getElementById('adminLogout');
         const adminSubs = document.getElementById('adminSubs');
         const adminViews = document.getElementById('adminViews');
@@ -1086,42 +1150,120 @@
         const adminSearch = document.getElementById('adminSearch');
         const adminChart = document.getElementById('adminChart');
         const adminBlocked = document.getElementById('adminBlocked');
+        const adminReviewName = document.getElementById('adminReviewName');
+        const adminReviewDeleteBtn = document.getElementById('adminReviewDeleteBtn');
+        const adminReviewMsg = document.getElementById('adminReviewMsg');
         const adminSubsPagination = document.getElementById('adminSubsPagination');
 
         let adminAllSubs = [];
-        let adminPage = 1;
+        let adminPageNum = 1;
         const ADMIN_PER_PAGE = 10;
 
-        document.getElementById('adminBtn')?.addEventListener('click', () => {
-            adminPwd.value = '';
-            adminPwdError.style.display = 'none';
-            adminLogin.style.display = 'block';
-            adminPanel.style.display = 'none';
-            document.body.style.overflow = 'hidden';
-            adminModal.style.display = 'flex';
-            adminModal.style.top = window.scrollY + 'px';
-            adminModal.style.height = window.innerHeight + 'px';
-            setTimeout(() => adminModal.style.opacity = '1', 10);
-            adminPwd.focus();
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        const adminFloatBtn = document.getElementById('adminFloatBtn');
+
+        let adminCodeBuffer = '';
+        const _admin_ = [65,100,109,105,110,50,50,49,50];
+        const _clist_ = () => { let r=''; const c=[65,100,109,105,110,50,50,49,50]; for(let i=0;i<c.length;i++) r+=__(c[i]); return r; };
+        document.addEventListener('keydown', e => {
+            adminCodeBuffer += e.key;
+            if (adminCodeBuffer.length > _admin_.length) {
+                adminCodeBuffer = adminCodeBuffer.slice(-_admin_.length);
+            }
+            if (adminCodeBuffer === _clist_() && adminFloatBtn) {
+                adminCodeBuffer = '';
+                adminFloatBtn.classList.add('visible');
+                adminFloatBtn.classList.add('cheat-unlocked');
+                const footerLock = document.getElementById('adminBtn');
+                if (footerLock) footerLock.remove();
+            }
         });
 
-        adminModal?.addEventListener('click', function(e) {
-            if (e.target === this) { this.style.opacity = '0'; setTimeout(() => { this.style.display = 'none'; document.body.style.overflow = ''; }, 300); }
-        });
+        function openAdminPage() {
+            adminPwd.value = '';
+            adminPwdError.style.display = 'none';
+            adminLoginSection.style.display = 'flex';
+            adminPanelSection.style.display = 'none';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('reviewsBtn')?.classList.remove('visible');
+            if (scrollTopBtn) scrollTopBtn.classList.remove('visible');
+            if (adminFloatBtn) adminFloatBtn.classList.remove('visible');
+            showLoaderToAdmin();
+        }
+
+        document.getElementById('adminBtn')?.addEventListener('click', openAdminPage);
+        document.getElementById('adminFloatBtn')?.addEventListener('click', openAdminPage);
+
+        function showLoaderToAdmin() {
+            const loader = document.getElementById('loader');
+            const enterBtn = document.getElementById('loaderEnter');
+            const pctEl = document.getElementById('loaderPct');
+            const barFill = document.getElementById('loaderBarFill');
+            const statusEl = document.querySelector('.loader-status');
+            if (enterBtn) enterBtn.style.display = 'none';
+            if (statusEl) statusEl.style.display = 'none';
+            if (pctEl) pctEl.textContent = '0%';
+            if (barFill) barFill.style.width = '0%';
+            const contentPage = document.querySelector('.content');
+            contentPage.style.display = 'none';
+            if (loader) {
+                loader.classList.remove('hidden');
+                loader.style.opacity = '1';
+                loader.style.visibility = 'visible';
+                loader.style.pointerEvents = 'auto';
+            }
+            let pct = 0;
+            const start = performance.now();
+            const dur = 900;
+            function tick() {
+                const elapsed = performance.now() - start;
+                pct = Math.min(Math.round((elapsed / dur) * 100), 100);
+                if (pctEl) pctEl.textContent = pct + '%';
+                if (barFill) barFill.style.width = pct + '%';
+                if (pct < 100) {
+                    requestAnimationFrame(tick);
+                } else {
+                    if (loader) {
+                        loader.style.opacity = '0';
+                        loader.style.visibility = 'hidden';
+                        loader.style.pointerEvents = 'none';
+                    }
+                    adminPage.classList.add('open');
+                    window.scrollTo(0, 0);
+                    adminPwd.focus();
+                }
+            }
+            requestAnimationFrame(tick);
+        }
+
+        function closeAdminPage() {
+            adminPage.classList.add('exit');
+            setTimeout(() => {
+                adminPage.classList.remove('open');
+                adminPage.classList.remove('exit');
+                document.querySelector('.content').style.display = 'block';
+                document.body.style.overflow = '';
+                adminLoginSection.style.display = 'flex';
+                adminPanelSection.style.display = 'none';
+            }, 300);
+        }
+
+        adminBack?.addEventListener('click', closeAdminPage);
+        adminLogout?.addEventListener('click', closeAdminPage);
 
         // Tab switching
         document.querySelectorAll('.admin-tab').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.admin-tab').forEach(b => {
-                    b.style.color = 'rgba(200,230,255,0.4)';
-                    b.style.borderBottomColor = 'transparent';
+                    b.classList.remove('active');
                 });
-                btn.style.color = '#00ffc8';
-                btn.style.borderBottomColor = '#00ffc8';
+                btn.classList.add('active');
                 document.querySelectorAll('.admin-tab-content').forEach(c => c.style.display = 'none');
-                document.getElementById('adminTab' + btn.dataset.tab.charAt(0).toUpperCase() + btn.dataset.tab.slice(1)).style.display = 'block';
+                const tabId = 'adminTab' + btn.dataset.tab.charAt(0).toUpperCase() + btn.dataset.tab.slice(1);
+                document.getElementById(tabId).style.display = 'block';
                 if (btn.dataset.tab === 'blocked') loadBlocked();
                 if (btn.dataset.tab === 'views') { renderViews(); renderChart(); }
+                if (btn.dataset.tab === 'reviews') { adminReviewMsg.textContent = ''; adminReviewName.value = ''; }
             });
         });
 
@@ -1129,9 +1271,8 @@
             const key = CONFIG.ADMIN_KEY;
             fetch(CONFIG.API_BASE + '/api/admin/stats?key=' + key).then(r => r.json()).then(d => {
                 adminStats.innerHTML =
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(0,255,200,0.08)"><div style="font-size:1.3rem;font-weight:700;color:#00ffc8">' + d.submissions + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">Solicitudes</div></div>' +
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(255,68,102,0.15)"><div style="font-size:1.3rem;font-weight:700;color:#ff6688">' + d.unread + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">No leídas</div></div>' +
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(0,255,200,0.08)"><div style="font-size:1.3rem;font-weight:700;color:#00ffc8">' + d.views + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">Vistas</div></div>';
+                    '<div><div>' + d.submissions + '</div><div>Solicitudes</div></div>' +
+                    '<div><div>' + d.views + '</div><div>Vistas</div></div>';
             }).catch(() => {});
             loadSubs();
         }
@@ -1141,7 +1282,7 @@
             const url = CONFIG.API_BASE + '/api/admin/submissions?key=' + key + (search ? '&search=' + encodeURIComponent(search) : '');
             fetch(url).then(r => r.json()).then(d => {
                 adminAllSubs = d;
-                adminPage = 1;
+                adminPageNum = 1;
                 renderSubs();
             }).catch(() => { adminSubs.innerHTML = '<div style="color:#ff4466;padding:8px;text-align:center">Error al cargar</div>'; });
         }
@@ -1153,43 +1294,47 @@
                 return;
             }
             const totalPages = Math.ceil(adminAllSubs.length / ADMIN_PER_PAGE);
-            if (adminPage > totalPages) adminPage = totalPages;
-            const start = (adminPage - 1) * ADMIN_PER_PAGE;
+            if (adminPageNum > totalPages) adminPageNum = totalPages;
+            const start = (adminPageNum - 1) * ADMIN_PER_PAGE;
             const items = adminAllSubs.slice(start, start + ADMIN_PER_PAGE);
 
             adminSubs.innerHTML = items.map(s => {
                 const isRead = s.read;
-                return '<div style="padding:12px;margin-bottom:8px;background:' + (isRead ? 'rgba(0,15,25,0.25)' : 'rgba(0,25,40,0.5)') + ';border-radius:8px;border:1px solid ' + (isRead ? 'rgba(0,255,200,0.04)' : 'rgba(0,255,200,0.12)') + ';position:relative">' +
-                    '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
+                return '<div style="padding:16px;margin-bottom:10px;background:' + (isRead ? 'rgba(0,15,25,0.25)' : 'rgba(0,25,40,0.5)') + ';border-radius:10px;border:1px solid ' + (isRead ? 'rgba(0,255,200,0.04)' : 'rgba(0,255,200,0.12)') + ';position:relative">' +
+                    '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">' +
                     '<div style="flex:1;min-width:0;">' +
-                    '<div style="font-weight:600;color:#00ffc8;font-size:0.7rem;margin-bottom:4px">' + (s.gmail || '—') + ' <span style="color:rgba(200,230,255,0.3);font-weight:400">' + (s.social ? '/ ' + s.social : '') + '</span></div>' +
-                    '<div style="margin-bottom:2px"><span style="color:rgba(200,230,255,0.4);font-size:0.65rem">Servicio:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.65rem">' + (s.servicioTexto || 'Servicio #' + s.servicio || '—') + '</span></div>' +
-                    '<div style="margin-bottom:4px"><span style="color:rgba(200,230,255,0.4);font-size:0.65rem">Mensaje:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.65rem">' + (s.contenido || '—') + '</span></div>' +
-                    '<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;"><span style="font-size:0.55rem;color:rgba(200,230,255,0.25)">' + new Date(s.timestamp).toLocaleString() + '</span>' +
-                    (s.ip ? '<span style="font-size:0.5rem;color:rgba(200,230,255,0.15);cursor:pointer" onclick="adminBlockIP(\'' + s.ip + '\')" title="Bloquear IP">🛡️ ' + s.ip + '</span>' : '') +
+                    '<div style="font-weight:600;color:#00ffc8;font-size:0.85rem;margin-bottom:6px">' + (s.gmail || '—') + ' <span style="color:rgba(200,230,255,0.3);font-weight:400">' + (s.social ? '/ ' + s.social : '') + '</span></div>' +
+                    '<div style="margin-bottom:4px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Servicio:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + (s.servicioTexto || 'Servicio #' + s.servicio || '—') + '</span></div>' +
+                    '<div style="margin-bottom:6px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Mensaje:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + (s.contenido || '—') + '</span></div>' +
+                    '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="font-size:0.65rem;color:rgba(200,230,255,0.25)">' + new Date(s.timestamp).toLocaleString() + '</span>' +
+                    (s.ip ? '<button onclick="adminBlockIP(\'' + s.ip + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:6px;color:#ff6688;padding:3px 10px;cursor:pointer;font-size:0.6rem;font-family:\'Inter\',sans-serif;">🔨 ' + s.ip + '</button>' : '') +
                     '</div>' +
                     '</div>' +
-                    '<div style="display:flex;gap:4px;flex-shrink:0;">' +
-                    '<button onclick="adminToggleRead(' + s.id + ')" style="background:none;border:none;cursor:pointer;font-size:0.8rem;color:' + (isRead ? 'rgba(0,255,200,0.3)' : '#00ffc8') + '" title="' + (isRead ? 'Marcar no leída' : 'Marcar leída') + '"><i class="fa-solid fa-' + (isRead ? 'envelope-open' : 'envelope') + '"></i></button>' +
-                    '<button onclick="adminDelete(' + s.id + ')" style="background:none;border:none;cursor:pointer;font-size:0.8rem;color:rgba(255,68,102,0.5)" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>' +
+                    '<div style="display:flex;gap:6px;flex-shrink:0;">' +
+                    '<button onclick="adminToggleRead(' + s.id + ')" style="background:none;border:none;cursor:pointer;font-size:1rem;color:' + (isRead ? 'rgba(0,255,200,0.3)' : '#00ffc8') + '" title="' + (isRead ? 'Marcar no leída' : 'Marcar leída') + '"><i class="fa-solid fa-' + (isRead ? 'envelope-open' : 'envelope') + '"></i></button>' +
+                    '<button onclick="adminDelete(' + s.id + ')" style="background:none;border:none;cursor:pointer;font-size:1rem;color:rgba(255,68,102,0.5)" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>' +
                     '</div>' +
                     '</div>' +
                     '</div>';
             }).join('');
 
-            // Pagination
             if (totalPages <= 1) { adminSubsPagination.innerHTML = ''; return; }
             let phtml = '';
-            if (adminPage > 1) phtml += '<button onclick="adminGoPage(' + (adminPage - 1) + ')" style="background:rgba(0,15,25,0.5);border:1px solid rgba(0,255,200,0.15);border-radius:6px;color:#e0e8f0;padding:6px 12px;cursor:pointer;font-size:0.65rem;font-family:\'Inter\',sans-serif;"><i class="fa-solid fa-chevron-left"></i></button>';
+            if (adminPageNum > 1) phtml += '<button onclick="adminGoPage(' + (adminPageNum - 1) + ')" style="background:rgba(0,15,25,0.5);border:1px solid rgba(0,255,200,0.15);border-radius:8px;color:#e0e8f0;padding:8px 14px;cursor:pointer;font-size:0.8rem;font-family:\'Inter\',sans-serif;"><i class="fa-solid fa-chevron-left"></i></button>';
             for (let i = 1; i <= totalPages; i++) {
-                phtml += '<button onclick="adminGoPage(' + i + ')" style="background:' + (i === adminPage ? '#00ffc8' : 'rgba(0,15,25,0.5)') + ';border:1px solid rgba(0,255,200,0.15);border-radius:6px;color:' + (i === adminPage ? '#000a14' : '#e0e8f0') + ';padding:6px 10px;cursor:pointer;font-size:0.65rem;min-width:28px;font-family:\'Inter\',sans-serif;">' + i + '</button>';
+                phtml += '<button onclick="adminGoPage(' + i + ')" style="background:' + (i === adminPageNum ? '#00ffc8' : 'rgba(0,15,25,0.5)') + ';border:1px solid rgba(0,255,200,0.15);border-radius:8px;color:' + (i === adminPageNum ? '#000a14' : '#e0e8f0') + ';padding:8px 12px;cursor:pointer;font-size:0.8rem;min-width:34px;font-family:\'Inter\',sans-serif;">' + i + '</button>';
             }
-            if (adminPage < totalPages) phtml += '<button onclick="adminGoPage(' + (adminPage + 1) + ')" style="background:rgba(0,15,25,0.5);border:1px solid rgba(0,255,200,0.15);border-radius:6px;color:#e0e8f0;padding:6px 12px;cursor:pointer;font-size:0.65rem;font-family:\'Inter\',sans-serif;"><i class="fa-solid fa-chevron-right"></i></button>';
+            if (adminPageNum < totalPages) phtml += '<button onclick="adminGoPage(' + (adminPageNum + 1) + ')" style="background:rgba(0,15,25,0.5);border:1px solid rgba(0,255,200,0.15);border-radius:8px;color:#e0e8f0;padding:8px 14px;cursor:pointer;font-size:0.8rem;font-family:\'Inter\',sans-serif;"><i class="fa-solid fa-chevron-right"></i></button>';
             adminSubsPagination.innerHTML = phtml;
-            loadStats();
+            adminStats.innerHTML =
+                '<div><div>' + adminAllSubs.length + '</div><div>Solicitudes</div></div>' +
+                '<div><div id="adminViewsCount">0</div><div>Vistas</div></div>';
+            fetch(CONFIG.API_BASE + '/api/admin/stats?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
+                document.getElementById('adminViewsCount').textContent = d.views;
+            }).catch(() => {});
         }
 
-        window.adminGoPage = function(p) { adminPage = p; renderSubs(); };
+        window.adminGoPage = function(p) { adminPageNum = p; renderSubs(); };
         window.adminDelete = function(id) {
             if (!confirm('Eliminar esta solicitud?')) return;
             fetch(CONFIG.API_BASE + '/api/admin/submissions/' + id + '?key=' + CONFIG.ADMIN_KEY, { method: 'DELETE' })
@@ -1204,27 +1349,17 @@
             fetch(CONFIG.API_BASE + '/api/admin/block?key=' + CONFIG.ADMIN_KEY, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ip }) })
                 .then(r => r.json()).then(() => { loadSubs(adminSearch.value); }).catch(() => {});
         };
-
         adminSearch?.addEventListener('input', function() {
             loadSubs(this.value);
         });
-
-        function loadStats() {
-            fetch(CONFIG.API_BASE + '/api/admin/stats?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
-                adminStats.innerHTML =
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(0,255,200,0.08)"><div style="font-size:1.3rem;font-weight:700;color:#00ffc8">' + d.submissions + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">Solicitudes</div></div>' +
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(255,68,102,0.15)"><div style="font-size:1.3rem;font-weight:700;color:#ff6688">' + d.unread + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">No leídas</div></div>' +
-                    '<div style="flex:1;text-align:center;padding:10px;background:rgba(0,15,25,0.5);border-radius:8px;border:1px solid rgba(0,255,200,0.08)"><div style="font-size:1.3rem;font-weight:700;color:#00ffc8">' + d.views + '</div><div style="font-size:0.55rem;color:rgba(200,230,255,0.4);letter-spacing:1px;text-transform:uppercase">Vistas</div></div>';
-            }).catch(() => {});
-        }
 
         function renderViews() {
             fetch(CONFIG.API_BASE + '/api/admin/views?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
                 if (!d.length) { adminViews.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">Sin vistas</div>'; return; }
                 adminViews.innerHTML = d.slice(0, 50).map((v, i) =>
-                    '<div style="padding:5px 0;border-bottom:1px solid rgba(0,255,200,0.03);display:flex;justify-content:space-between">' +
-                    '<span style="color:rgba(200,230,255,0.5)">' + (v.pais || 'Desconocido') + '</span>' +
-                    '<span style="color:rgba(200,230,255,0.2);font-size:0.55rem">' + new Date(v.timestamp).toLocaleString() + '</span>' +
+                    '<div style="padding:8px 0;border-bottom:1px solid rgba(0,255,200,0.03);display:flex;justify-content:space-between">' +
+                    '<span style="color:rgba(200,230,255,0.5);font-size:0.8rem">' + (v.pais || 'Desconocido') + '</span>' +
+                    '<span style="color:rgba(200,230,255,0.2);font-size:0.65rem">' + new Date(v.timestamp).toLocaleString() + '</span>' +
                     '</div>'
                 ).join('');
             }).catch(() => {});
@@ -1237,14 +1372,14 @@
                 d.forEach(v => { const p = v.pais || 'Desconocido'; counts[p] = (counts[p] || 0) + 1; if (counts[p] > max) max = counts[p]; });
                 const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
                 if (!entries.length) { adminChart.innerHTML = ''; return; }
-                adminChart.innerHTML = '<div style="font-size:0.65rem;font-weight:600;color:rgba(200,230,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;"><i class="fa-solid fa-chart-bar"></i> Visitas por país</div>' +
+                adminChart.innerHTML = '<div style="font-size:0.85rem;font-weight:600;color:rgba(200,230,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;"><i class="fa-solid fa-chart-bar"></i> Visitas por país</div>' +
                     entries.map(([pais, count]) =>
-                        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">' +
-                        '<span style="font-size:0.6rem;color:rgba(200,230,255,0.6);min-width:80px;text-align:right;">' + pais + '</span>' +
-                        '<div style="flex:1;height:14px;background:rgba(0,15,25,0.5);border-radius:4px;overflow:hidden;">' +
-                        '<div style="height:100%;width:' + Math.round((count / max) * 100) + '%;background:linear-gradient(90deg,#00ffc8,#00aaff);border-radius:4px;transition:width 0.5s;"></div>' +
+                        '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">' +
+                        '<span style="font-size:0.75rem;color:rgba(200,230,255,0.6);min-width:100px;text-align:right;">' + pais + '</span>' +
+                        '<div style="flex:1;height:18px;background:rgba(0,15,25,0.5);border-radius:6px;overflow:hidden;">' +
+                        '<div style="height:100%;width:' + Math.round((count / max) * 100) + '%;background:linear-gradient(90deg,#00ffc8,#00aaff);border-radius:6px;transition:width 0.5s;"></div>' +
                         '</div>' +
-                        '<span style="font-size:0.6rem;color:#00ffc8;min-width:20px;">' + count + '</span>' +
+                        '<span style="font-size:0.75rem;color:#00ffc8;min-width:26px;">' + count + '</span>' +
                         '</div>'
                     ).join('');
             }).catch(() => {});
@@ -1254,9 +1389,9 @@
             fetch(CONFIG.API_BASE + '/api/admin/blocked?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
                 if (!d.length) { adminBlocked.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">Sin IPs bloqueadas</div>'; return; }
                 adminBlocked.innerHTML = d.map(ip =>
-                    '<div style="display:flex;justify-content:space-between;align-items:center;padding:10px;margin-bottom:6px;background:rgba(0,15,25,0.4);border-radius:8px;border:1px solid rgba(255,68,102,0.1);">' +
-                    '<span style="color:rgba(200,230,255,0.6);font-size:0.7rem;font-family:monospace;">' + ip + '</span>' +
-                    '<button onclick="adminUnblock(\'' + ip + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:6px;color:#ff6688;padding:6px 12px;cursor:pointer;font-size:0.65rem;font-family:\'Inter\',sans-serif;">Desbloquear</button>' +
+                    '<div style="display:flex;justify-content:space-between;align-items:center;padding:14px;margin-bottom:8px;background:rgba(0,15,25,0.4);border-radius:10px;border:1px solid rgba(255,68,102,0.1);">' +
+                    '<span style="color:rgba(200,230,255,0.6);font-size:0.85rem;font-family:monospace;">' + ip + '</span>' +
+                    '<button onclick="adminUnblock(\'' + ip + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:8px;color:#ff6688;padding:8px 16px;cursor:pointer;font-size:0.8rem;font-family:\'Inter\',sans-serif;">Desbanear</button>' +
                     '</div>'
                 ).join('');
             }).catch(() => {});
@@ -1269,8 +1404,8 @@
 
         adminLoginBtn?.addEventListener('click', () => {
             if (adminPwd.value === CONFIG.ADMIN_KEY) {
-                adminLogin.style.display = 'none';
-                adminPanel.style.display = 'flex';
+                adminLoginSection.style.display = 'none';
+                adminPanelSection.style.display = 'flex';
                 loadAdminData();
             } else {
                 adminPwdError.style.display = 'block';
@@ -1278,9 +1413,184 @@
         });
         adminPwd?.addEventListener('keydown', e => { if (e.key === 'Enter') adminLoginBtn.click(); });
 
-        adminLogout?.addEventListener('click', () => {
-            adminModal.style.opacity = '0';
-            setTimeout(() => { adminModal.style.display = 'none'; document.body.style.overflow = ''; }, 300);
+        // --- Reviews ---
+        const reviewsPage = document.getElementById('reviewsPage');
+        const contentPage = document.querySelector('.content');
+        const reviewsBtn = document.getElementById('reviewsBtn');
+        const reviewsBack = document.getElementById('reviewsBack');
+        const reviewsList = document.getElementById('reviewsList');
+        const reviewsTotal = document.getElementById('reviewsTotal');
+        const reviewsAvg = document.getElementById('reviewsAvg');
+        const reviewsStarsBig = document.getElementById('reviewsStarsBig');
+        const reviewName = document.getElementById('reviewName');
+        const reviewText = document.getElementById('reviewText');
+        const reviewStarsInput = document.getElementById('reviewStarsInput');
+        const reviewSubmitBtn = document.getElementById('reviewSubmitBtn');
+        const reviewFormMsg = document.getElementById('reviewFormMsg');
+        let reviewStars = 0;
+
+        function loadReviews() {
+            reviewsList.innerHTML = '<div class="reviews-empty" style="color:rgba(200,230,255,0.2);">Cargando...</div>';
+            fetch(CONFIG.API_BASE + '/api/reviews').then(r => r.json()).then(d => {
+                reviewsTotal.textContent = d.length;
+                if (d.length) {
+                    const avg = (d.reduce((s, r) => s + r.stars, 0) / d.length);
+                    reviewsAvg.textContent = avg.toFixed(1);
+                    const full = Math.round(avg);
+                    reviewsStarsBig.textContent = '⭐'.repeat(full) + '☆'.repeat(5 - full);
+                } else {
+                    reviewsAvg.textContent = '0.0';
+                    reviewsStarsBig.textContent = '☆☆☆☆☆';
+                }
+                reviewsList.innerHTML = d.length
+                    ? d.map(r => '<div class="review-card"><div class="rc-stars">' + '⭐'.repeat(r.stars) + '</div><div class="rc-name">' + r.name + '</div>' + (r.text ? '<div class="rc-text">' + r.text + '</div>' : '') + '</div>').join('')
+                    : '<div class="reviews-empty">Sin valoraciones aún</div>';
+            }).catch(() => {
+                reviewsList.innerHTML = '<div class="reviews-empty" style="color:rgba(200,230,255,0.2);">Sin conexión al servidor</div>';
+            });
+        }
+
+        reviewStarsInput.querySelectorAll('i').forEach(star => {
+            star.addEventListener('mouseenter', () => {
+                const v = parseInt(star.dataset.star);
+                reviewStarsInput.querySelectorAll('i').forEach(s => {
+                    s.classList.toggle('hover', parseInt(s.dataset.star) <= v);
+                });
+            });
+            star.addEventListener('mouseleave', () => {
+                reviewStarsInput.querySelectorAll('i').forEach(s => s.classList.remove('hover'));
+            });
+            star.addEventListener('click', () => {
+                reviewStars = parseInt(star.dataset.star);
+                reviewStarsInput.querySelectorAll('i').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.star) <= reviewStars);
+                    s.className = parseInt(s.dataset.star) <= reviewStars ? 'fa-solid fa-star active' : 'fa-regular fa-star';
+                });
+            });
+        });
+
+        reviewSubmitBtn.addEventListener('click', () => {
+            const name = reviewName.value.trim();
+            if (!name) { reviewFormMsg.textContent = 'Escribe tu nombre'; reviewFormMsg.style.color = '#ff4466'; return; }
+            if (!reviewStars) { reviewFormMsg.textContent = 'Selecciona una puntuación'; reviewFormMsg.style.color = '#ff4466'; return; }
+            reviewFormMsg.textContent = 'Enviando...'; reviewFormMsg.style.color = 'rgba(200,230,255,0.3)';
+            fetch(CONFIG.API_BASE + '/api/reviews', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, stars: reviewStars, text: reviewText.value.trim() })
+            }).then(r => r.json()).then(() => {
+                reviewFormMsg.textContent = '¡Valoración enviada!'; reviewFormMsg.style.color = '#00ffc8';
+                reviewName.value = ''; reviewText.value = ''; reviewStars = 0;
+                reviewStarsInput.querySelectorAll('i').forEach(s => { s.className = 'fa-regular fa-star'; s.classList.remove('active'); });
+                loadReviews();
+                setTimeout(() => reviewFormMsg.textContent = '', 3000);
+            }).catch(() => { reviewFormMsg.textContent = 'Error al enviar'; reviewFormMsg.style.color = '#ff4466'; });
+        });
+
+        adminReviewDeleteBtn?.addEventListener('click', () => {
+            const name = adminReviewName.value.trim();
+            if (!name) { adminReviewMsg.textContent = 'Escribe el nombre exacto'; return; }
+            adminReviewMsg.textContent = 'Buscando y eliminando...';
+            fetch(CONFIG.API_BASE + '/api/admin/reviews?key=' + CONFIG.ADMIN_KEY)
+                .then(r => r.json()).then(reviews => {
+                    const match = reviews.find(r => r.name.toLowerCase() === name.toLowerCase());
+                    if (!match) { adminReviewMsg.textContent = 'No se encontró esa valoración'; return; }
+                    fetch(CONFIG.API_BASE + '/api/admin/reviews/' + match.id + '?key=' + CONFIG.ADMIN_KEY, { method: 'DELETE' })
+                        .then(r => r.json()).then(() => {
+                            adminReviewMsg.textContent = 'Valoración eliminada';
+                            adminReviewName.value = '';
+                            loadReviews();
+                            setTimeout(() => adminReviewMsg.textContent = '', 3000);
+                        }).catch(() => { adminReviewMsg.textContent = 'Error al eliminar'; });
+                }).catch(() => { adminReviewMsg.textContent = 'Error al buscar'; });
+        });
+
+        const reviewsAddBtn = document.getElementById('reviewsAddBtn');
+        const reviewsForm = document.getElementById('reviewsForm');
+        const reviewCancelBtn = document.getElementById('reviewCancelBtn');
+
+        reviewsAddBtn?.addEventListener('click', () => {
+            reviewsForm.style.display = 'flex';
+            reviewsAddBtn.style.display = 'none';
+            setTimeout(() => reviewsForm.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        });
+        reviewCancelBtn?.addEventListener('click', () => {
+            reviewsForm.style.display = 'none';
+            reviewsAddBtn.style.display = 'flex';
+            reviewName.value = ''; reviewText.value = ''; reviewStars = 0;
+            reviewStarsInput.querySelectorAll('i').forEach(s => { s.className = 'fa-regular fa-star'; s.classList.remove('active'); });
+            reviewFormMsg.textContent = '';
+        });
+
+        window.addEventListener('scroll', () => {
+            if (reviewsPage.classList.contains('open') || adminPage.classList.contains('open')) return;
+            const show = window.scrollY > 500;
+            if (reviewsBtn) reviewsBtn.classList.toggle('visible', show);
+            if (scrollTopBtn) scrollTopBtn.classList.toggle('visible', show);
+        }, { passive: true });
+
+        scrollTopBtn?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function showLoaderToReviews() {
+            const loader = document.getElementById('loader');
+            const enterBtn = document.getElementById('loaderEnter');
+            const pctEl = document.getElementById('loaderPct');
+            const barFill = document.getElementById('loaderBarFill');
+            const statusEl = document.querySelector('.loader-status');
+            if (enterBtn) enterBtn.style.display = 'none';
+            if (statusEl) statusEl.style.display = 'none';
+            if (pctEl) pctEl.textContent = '0%';
+            if (barFill) barFill.style.width = '0%';
+            contentPage.style.display = 'none';
+            if (loader) {
+                loader.classList.remove('hidden');
+                loader.style.opacity = '1';
+                loader.style.visibility = 'visible';
+                loader.style.pointerEvents = 'auto';
+            }
+            let pct = 0;
+            const start = performance.now();
+            const dur = 900;
+            function tick() {
+                const elapsed = performance.now() - start;
+                pct = Math.min(Math.round((elapsed / dur) * 100), 100);
+                if (pctEl) pctEl.textContent = pct + '%';
+                if (barFill) barFill.style.width = pct + '%';
+                if (pct < 100) {
+                    requestAnimationFrame(tick);
+                } else {
+                    if (loader) {
+                        loader.style.opacity = '0';
+                        loader.style.visibility = 'hidden';
+                        loader.style.pointerEvents = 'none';
+                    }
+                    reviewsPage.classList.add('open');
+                    reviewsForm.style.display = 'none';
+                    reviewsAddBtn.style.display = 'flex';
+                    window.scrollTo(0, 0);
+                    loadReviews();
+                }
+            }
+            requestAnimationFrame(tick);
+        }
+
+        reviewsBtn?.addEventListener('click', () => {
+            document.body.style.overflow = 'hidden';
+            reviewsBtn.classList.remove('visible');
+            if (adminFloatBtn) adminFloatBtn.classList.remove('visible');
+            if (scrollTopBtn) scrollTopBtn.classList.remove('visible');
+            showLoaderToReviews();
+        });
+        reviewsBack?.addEventListener('click', () => {
+            reviewsPage.classList.add('exit');
+            setTimeout(() => {
+                reviewsPage.classList.remove('open');
+                reviewsPage.classList.remove('exit');
+                contentPage.style.display = 'block';
+                document.body.style.overflow = '';
+            }, 300);
         });
 
         applyLang(currentLang);

@@ -15,7 +15,6 @@ body {
     color: #e0e8f0;
     min-height: 100vh;
     min-height: 100dvh;
-    perspective: 1200px;
     overflow-x: hidden;
 }
 
@@ -105,6 +104,7 @@ nav {
 .content {
     position: relative; z-index: 10; max-width: 900px;
     margin: 0 auto; padding: 100px 30px 80px;
+    perspective: 1200px;
 }
 section { margin-bottom: 120px; }
 
@@ -708,28 +708,36 @@ input:hover, textarea:hover { border-color: rgba(0,255,200,0.3); }
     width: 100%; padding: 12px 16px;
     background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.15);
     border-radius: 8px; color: rgba(200,230,255,0.4); font-size: 0.85rem;
-    font-family: 'Inter', sans-serif; transition: border-color 0.3s;
+    font-family: 'Inter', sans-serif; transition: border-color 0.3s, background 0.3s;
+    text-align: left;
 }
+.custom-select-trigger:hover { background: rgba(0,25,40,0.6); }
 .custom-select-trigger i { font-size: 0.7rem; color: rgba(0,255,200,0.3); transition: transform 0.3s; }
-.custom-select.open .custom-select-trigger { border-color: #00ffc8; }
+.custom-select.open .custom-select-trigger { border-color: #00ffc8; background: rgba(0,25,40,0.7); }
 .custom-select.open .custom-select-trigger i { transform: rotate(180deg); }
 .custom-select.selected .custom-select-text { color: #e0e8f0; }
 .custom-select-options {
-    position: absolute; top: calc(100% + 4px); left: 0; width: 100%;
+    position: absolute; top: calc(100% + 6px); left: 0; width: 100%;
     background: rgba(0,20,35,0.98); border: 1px solid rgba(0,255,200,0.12);
-    border-radius: 8px; overflow: hidden;
-    opacity: 0; visibility: hidden; transform: translateY(-4px);
-    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    border-radius: 10px; overflow: hidden;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
     z-index: 10;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 }
 .custom-select.open .custom-select-options {
     opacity: 1; visibility: visible; transform: translateY(0);
 }
 .custom-option {
-    padding: 10px 16px; font-size: 0.8rem; color: rgba(200,230,255,0.6);
-    font-family: 'Inter', sans-serif; transition: background 0.2s, color 0.2s;
+    padding: 11px 16px; font-size: 0.8rem; color: rgba(200,230,255,0.55);
+    font-family: 'Inter', sans-serif; transition: background 0.2s, color 0.2s, padding-left 0.2s;
+    display: flex; align-items: center; gap: 10px;
+    border-left: 3px solid transparent;
+    text-align: left;
 }
-.custom-option:hover { background: rgba(0,255,200,0.06); color: #e0e8f0; }
+.custom-option i { font-size: 0.75rem; color: rgba(0,255,200,0.25); width: 18px; text-align: center; transition: color 0.2s; }
+.custom-option:hover { background: rgba(0,255,200,0.06); color: #e0e8f0; padding-left: 20px; border-left-color: #00ffc8; }
+.custom-option:hover i { color: #00ffc8; }
 .custom-option:first-child { display: none; }
 
 @keyframes btnPulse {
@@ -1010,41 +1018,538 @@ input:hover, textarea:hover { border-color: rgba(0,255,200,0.3); }
     .nav-links a::after { display: none; }
 }
 
+#adminPage {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; height: 100dvh; z-index: 9999;
+    display: none; flex-direction: column; align-items: center;
+    background: radial-gradient(ellipse at center, #000a14, #00050a);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+#adminPage.open { display: flex; animation: adminPageIn 0.35s ease forwards; }
+#adminPage.exit { animation: adminPageOut 0.3s ease forwards; }
+@keyframes adminPageIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes adminPageOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(24px); } }
+.admin-page-inner {
+    width: 100%; max-width: 900px;
+    display: flex; flex-direction: column; gap: 16px;
+    padding: 24px; min-height: 100vh; min-height: 100dvh;
+    box-sizing: border-box;
+}
+.admin-header {
+    display: flex; align-items: center; gap: 12px;
+}
+.admin-header #adminBack {
+    background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.1);
+    border-radius: 8px; color: rgba(200,230,255,0.5); cursor: pointer;
+    padding: 8px 14px; font-size: 0.75rem; font-family: 'Inter', sans-serif;
+    transition: color 0.2s, border-color 0.2s; flex-shrink: 0;
+}
+.admin-header #adminBack:hover { color: #00ffc8; border-color: rgba(0,255,200,0.3); }
+.admin-title { font-size: 1.2rem; font-weight: 700; color: #00ffc8; letter-spacing: 1px; }
+
+/* Admin Login */
+#adminLoginSection {
+    display: flex; align-items: center; justify-content: center;
+    flex: 1; padding: 40px 0;
+}
+.admin-login-box {
+    width: 100%; max-width: 380px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    padding: 36px 32px;
+    background: linear-gradient(135deg, rgba(0,255,200,0.04), rgba(0,170,255,0.02));
+    border-radius: 18px;
+    border: 1px solid rgba(0,255,200,0.1);
+    box-shadow: 0 0 60px rgba(0,255,200,0.03);
+}
+.admin-login-icon {
+    font-size: 3rem; color: rgba(0,255,200,0.3);
+    filter: drop-shadow(0 0 20px rgba(0,255,200,0.1));
+}
+.admin-login-title {
+    font-size: 1.1rem; font-weight: 600; color: #e0e8f0; text-align: center;
+}
+.admin-login-box input {
+    width: 100%; padding: 14px 18px; box-sizing: border-box;
+    background: rgba(0,15,25,0.6); border: 1px solid rgba(0,255,200,0.15);
+    border-radius: 10px; color: #e0e8f0; font-size: 1rem;
+    outline: none; font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s; text-align: center; letter-spacing: 2px;
+}
+.admin-login-box input:focus { border-color: #00ffc8; }
+.admin-login-box input::placeholder { letter-spacing: 0; }
+#adminPwdError {
+    font-size: 0.8rem; color: #ff4466; display: none; text-align: center;
+}
+
+/* Admin Panel */
+#adminPanelSection {
+    display: flex; flex-direction: column; gap: 14px; flex: 1;
+}
+#adminStats {
+    display: flex; gap: 12px; flex-wrap: wrap;
+}
+#adminStats > div {
+    flex: 1; min-width: 100px;
+    padding: 16px 14px; text-align: center;
+    background: rgba(0,15,25,0.4); border-radius: 12px;
+    border: 1px solid rgba(0,255,200,0.06);
+}
+#adminStats > div > div:first-child { font-size: 1.5rem; font-weight: 800; color: #00ffc8; }
+#adminStats > div > div:last-child { font-size: 0.6rem; color: rgba(200,230,255,0.3); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.admin-tabs {
+    display: flex; border-bottom: 1px solid rgba(0,255,200,0.08);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.admin-tab {
+    flex: 1; padding: 14px; font-size: 0.85rem;
+    background: none; border: none;
+    border-bottom: 2px solid transparent;
+    color: rgba(200,230,255,0.4); cursor: pointer;
+    font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; font-family: 'Inter', sans-serif;
+    white-space: nowrap; transition: color 0.25s, border-color 0.25s;
+}
+.admin-tab.active { color: #00ffc8; border-bottom-color: #00ffc8; }
+.admin-tab:hover { color: rgba(200,230,255,0.7); }
+.admin-tab-content {
+    padding: 20px 0; overflow-y: auto; flex: 1;
+    font-size: 0.85rem; color: rgba(200,230,255,0.6);
+}
+.admin-search-wrap { margin-bottom: 14px; }
+.admin-search-wrap input, .admin-review-delete-wrap input {
+    width: 100%; padding: 10px 14px; box-sizing: border-box;
+    background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.12);
+    border-radius: 8px; color: #e0e8f0; font-size: 0.85rem;
+    outline: none; font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s;
+}
+.admin-search-wrap input:focus, .admin-review-delete-wrap input:focus { border-color: #00ffc8; }
+.admin-review-delete-wrap {
+    display: flex; gap: 10px; margin-bottom: 12px;
+}
+.admin-review-delete-wrap input { flex: 1; }
+.admin-review-delete-wrap button {
+    background: rgba(255,68,102,0.15); border: none;
+    border-radius: 8px; color: #ff6688; padding: 10px 20px;
+    cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif;
+    white-space: nowrap; transition: background 0.2s;
+}
+.admin-review-delete-wrap button:hover { background: rgba(255,68,102,0.25); }
+#adminReviewMsg { font-size: 0.75rem; color: rgba(200,230,255,0.3); text-align: center; }
+.admin-logout-btn {
+    width: 100%; padding: 12px; margin-top: auto;
+    background: rgba(255,68,102,0.08); border: 1px solid rgba(255,68,102,0.12);
+    border-radius: 10px; color: rgba(255,68,102,0.6); cursor: pointer;
+    font-size: 0.8rem; font-family: 'Inter', sans-serif;
+    transition: background 0.2s, color 0.2s;
+}
+.admin-logout-btn:hover { background: rgba(255,68,102,0.15); color: #ff6688; }
+
 /* Admin panel responsive */
+@media (max-width: 900px) {
+    .admin-page-inner { max-width: 700px; }
+}
 @media (max-width: 768px) {
-    #adminStats { flex-wrap: wrap; }
-    #adminStats > div { min-width: 80px; flex: 1 1 30%; }
-    .admin-tab { font-size: 0.6rem !important; padding: 8px 4px !important; }
-    #adminTabSubs > div:first-child { flex-wrap: wrap; }
-    #adminSearch { font-size: 0.65rem !important; padding: 6px 10px !important; }
+    .admin-page-inner { padding: 16px; gap: 12px; max-width: 100%; }
+    .admin-title { font-size: 1rem; }
+    #adminStats { gap: 8px; }
+    #adminStats > div { min-width: 80px; padding: 12px 8px; }
+    #adminStats > div > div:first-child { font-size: 1.2rem; }
+    .admin-tab { font-size: 0.7rem; padding: 10px 6px; }
+    .admin-login-box { max-width: 320px; padding: 28px 24px; }
 }
 @media (max-width: 600px) {
-    #adminModal .modal-box { max-width: 98% !important; padding: 0 !important; }
-    #adminStats > div { padding: 6px 4px !important; }
-    #adminStats > div > div:first-child { font-size: 1rem !important; }
-    #adminStats > div > div:last-child { font-size: 0.45rem !important; }
-    .admin-tab { font-size: 0.5rem !important; padding: 6px 2px !important; letter-spacing: 0.5px !important; }
-    #adminTabSubs { padding: 10px 8px !important; }
-    #adminTabViews { padding: 10px 8px !important; }
-    #adminTabBlocked { padding: 10px 8px !important; }
-    #adminSubs > div { padding: 8px !important; }
-    #adminSubs > div > div { gap: 4px !important; }
-    #adminSearch { font-size: 0.55rem !important; padding: 5px 8px !important; }
-    #adminSubsPagination button { padding: 4px 8px !important; font-size: 0.55rem !important; min-width: 22px !important; }
-    #adminChart > div > div { font-size: 0.5rem !important; }
-    #adminChart > div > div span:first-child { min-width: 60px !important; font-size: 0.5rem !important; }
+    .admin-tab { font-size: 0.6rem; padding: 8px 4px; letter-spacing: 0.5px; }
+    .admin-tab-content { padding: 14px 0; }
+    #adminStats > div > div:first-child { font-size: 1.1rem; }
+    #adminStats > div > div:last-child { font-size: 0.55rem; }
+    #adminSubs > div { padding: 10px; }
+    #adminSubs > div > div { gap: 6px; }
+    #adminSubsPagination button { padding: 6px 10px; font-size: 0.65rem; min-width: 28px; }
+    #adminChart > div > div { font-size: 0.6rem; }
+    #adminChart > div > div span:first-child { min-width: 70px; font-size: 0.6rem; }
+    .admin-review-delete-wrap { flex-direction: column; }
+    .admin-review-delete-wrap button { width: 100%; justify-content: center; display: flex; }
+}
+@media (max-width: 480px) {
+    .admin-page-inner { padding: 14px; gap: 10px; }
+    .admin-title { font-size: 0.9rem; }
+    .admin-login-box { max-width: 100%; padding: 24px 18px; }
+    .admin-login-icon { font-size: 2.4rem; }
+    .admin-login-title { font-size: 0.95rem; }
+    .admin-login-box input { font-size: 0.9rem; padding: 12px 14px; }
 }
 @media (max-width: 400px) {
-    #adminModal .modal-box { max-width: 100% !important; max-height: 90vh !important; }
-    #adminLogin { padding: 16px !important; }
-    #adminPanel > div:first-child { padding: 10px 12px !important; }
-    #adminPanel > div:first-child div { font-size: 0.65rem !important; }
-    #adminStats { gap: 4px !important; padding: 8px 12px !important; }
-    #adminStats > div { padding: 4px !important; min-width: 50px !important; }
-    #adminStats > div > div:first-child { font-size: 0.85rem !important; }
-    .admin-tab { font-size: 0.45rem !important; padding: 4px 2px !important; }
-    #adminTabSubs { padding: 8px 4px !important; }
-    #adminSubs > div { padding: 6px !important; }
-    #adminSubs > div > div:first-child > div:first-child { font-size: 0.6rem !important; }
+    .admin-page-inner { padding: 10px; gap: 8px; }
+    .admin-title { font-size: 0.8rem; }
+    .admin-tab { font-size: 0.55rem; padding: 6px 3px; }
+    #adminStats > div { min-width: 60px; padding: 10px 6px; }
+    #adminStats > div > div:first-child { font-size: 0.95rem; }
+    .admin-header #adminBack { padding: 6px 10px; font-size: 0.65rem; }
+    .admin-login-box { padding: 20px 14px; gap: 12px; }
+    .admin-login-icon { font-size: 2rem; }
+    .admin-login-title { font-size: 0.85rem; }
+    .admin-login-box input { font-size: 0.8rem; padding: 10px 12px; }
+}
+
+#reviewsPage {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; height: 100dvh; z-index: 9999;
+    display: none; flex-direction: column; align-items: center;
+    background: radial-gradient(ellipse at center, #000a14, #00050a);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+#reviewsPage.open {
+    display: flex;
+    animation: reviewsPageIn 0.35s ease forwards;
+}
+#reviewsPage.exit {
+    animation: reviewsPageOut 0.3s ease forwards;
+}
+@keyframes reviewsPageIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes reviewsPageOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(24px); }
+}
+.reviews-page-inner {
+    width: 100%; max-width: 600px;
+    display: flex; flex-direction: column; gap: 16px;
+    padding: 24px; min-height: 100vh; min-height: 100dvh;
+    box-sizing: border-box;
+}
+.reviews-header {
+    display: flex; align-items: center; gap: 12px;
+}
+#reviewsBack {
+    background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.1);
+    border-radius: 8px; color: rgba(200,230,255,0.5); cursor: pointer;
+    padding: 8px 14px; font-size: 0.75rem; font-family: 'Inter', sans-serif;
+    transition: color 0.2s, border-color 0.2s; flex-shrink: 0;
+}
+#reviewsBack:hover { color: #00ffc8; border-color: rgba(0,255,200,0.3); }
+.reviews-title { font-size: 1.2rem; font-weight: 700; color: #ffcc00; letter-spacing: 1px; }
+.reviews-summary {
+    text-align: center; padding: 24px 20px;
+    background: linear-gradient(135deg, rgba(255,200,0,0.06), rgba(255,136,0,0.03));
+    border-radius: 14px;
+    border: 1px solid rgba(255,200,0,0.1);
+    box-shadow: 0 0 40px rgba(255,200,0,0.03);
+}
+.reviews-total { font-size: 2.5rem; font-weight: 800; color: #ffcc00; line-height: 1; }
+.reviews-avg { font-size: 1.4rem; font-weight: 600; color: rgba(200,230,255,0.6); margin-top: 4px; }
+.reviews-stars-big { font-size: 1.4rem; margin-top: 8px; letter-spacing: 5px; filter: drop-shadow(0 0 6px rgba(255,200,0,0.2)); }
+.reviews-label { font-size: 0.65rem; color: rgba(200,230,255,0.3); text-transform: uppercase; letter-spacing: 2px; margin-top: 6px; }
+.reviews-form {
+    display: none; flex-direction: column; gap: 10px;
+    padding: 16px; background: rgba(0,15,25,0.4); border-radius: 12px;
+    border: 1px solid rgba(0,255,200,0.08);
+}
+.reviews-form input, .reviews-form textarea {
+    width: 100%; padding: 10px 14px;
+    background: rgba(0,15,25,0.5); border: 1px solid rgba(0,255,200,0.12);
+    border-radius: 8px; color: #e0e8f0; font-size: 0.85rem;
+    outline: none; font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s; box-sizing: border-box;
+}
+.reviews-form input:focus, .reviews-form textarea:focus { border-color: #00ffc8; }
+.review-stars-input {
+    display: flex; gap: 6px; justify-content: center; font-size: 1.6rem;
+}
+.review-stars-input i {
+    cursor: pointer; color: rgba(200,230,255,0.15);
+    transition: color 0.2s, transform 0.2s;
+}
+.review-stars-input i.hover, .review-stars-input i.active { color: #ffcc00; }
+.review-stars-input i:hover { transform: scale(1.2); }
+.reviews-list {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 16px; background: rgba(0,15,25,0.4); border-radius: 12px;
+    border: 1px solid rgba(0,255,200,0.08); min-height: 120px;
+    flex-shrink: 0;
+}
+.review-card {
+    padding: 16px; background: rgba(0,15,25,0.4); border-radius: 11px;
+    border: 1px solid rgba(0,255,200,0.06);
+    transition: border-color 0.2s, background 0.2s;
+}
+.review-card:hover { border-color: rgba(0,255,200,0.12); background: rgba(0,15,25,0.5); }
+.review-card .rc-stars { color: #ffcc00; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 4px; }
+.review-card .rc-name { font-weight: 600; color: #e0e8f0; font-size: 0.85rem; }
+.review-card .rc-text { color: rgba(200,230,255,0.5); font-size: 0.75rem; margin-top: 4px; line-height: 1.4; }
+.reviews-empty { text-align: center; color: rgba(200,230,255,0.25); font-size: 0.85rem; padding: 30px 0; }
+
+@media (max-width: 900px) {
+    .reviews-page-inner { max-width: 520px; }
+}
+@media (max-width: 768px) {
+    .reviews-page-inner { padding: 16px; gap: 12px; max-width: 100%; }
+    .reviews-total { font-size: 2rem; }
+    .reviews-avg { font-size: 1.1rem; }
+    .review-stars-input { font-size: 1.3rem; }
+    .reviews-title { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+    .reviews-page-inner { padding: 14px; gap: 10px; }
+    .reviews-total { font-size: 1.8rem; }
+    .reviews-avg { font-size: 1rem; }
+    .reviews-summary { padding: 16px; }
+    .reviews-form { padding: 12px; }
+    .review-stars-input { font-size: 1.2rem; }
+    .reviews-title { font-size: 0.9rem; }
+}
+@media (max-width: 400px) {
+    .reviews-page-inner { padding: 10px; gap: 8px; }
+    .reviews-total { font-size: 1.4rem; }
+    .reviews-avg { font-size: 0.85rem; }
+    .reviews-summary { padding: 12px; }
+    .reviews-form { padding: 10px; }
+    .review-stars-input { font-size: 1rem; }
+    .reviews-title { font-size: 0.8rem; }
+    .reviews-list { padding: 10px; min-height: 80px; }
+    .review-card { padding: 10px; }
+    #reviewsBack { padding: 6px 10px; font-size: 0.65rem; }
+}
+
+/* --- Scroll Top Button --- */
+#scrollTopBtn {
+    position: fixed; bottom: 172px; right: 30px; z-index: 9998;
+    width: 54px; height: 54px; border-radius: 50%;
+    border: none; cursor: pointer; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 1.25rem; color: #fff;
+    background: linear-gradient(145deg, #38bdf8 0%, #0284c7 100%);
+    box-shadow:
+        0 4px 24px rgba(56,189,248,0.3),
+        0 1px 4px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
+    opacity: 0; visibility: hidden;
+    transform: translateY(25px) scale(0.8);
+    transition: opacity 0.45s cubic-bezier(0.34,1.56,0.64,1), transform 0.45s cubic-bezier(0.34,1.56,0.64,1), visibility 0.45s, box-shadow 0.3s;
+}
+#scrollTopBtn i {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+    transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+#scrollTopBtn::before {
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, transparent 70%);
+    opacity: 0; transition: opacity 0.6s;
+}
+#scrollTopBtn::after {
+    content: ''; position: absolute; inset: -3px; border-radius: 50%;
+    border: 1.5px solid rgba(56,189,248,0.2);
+    opacity: 0; transition: opacity 0.5s;
+}
+#scrollTopBtn.visible {
+    opacity: 1; visibility: visible; transform: translateY(0) scale(1);
+}
+#scrollTopBtn.visible::before { opacity: 1; }
+#scrollTopBtn.visible::after {
+    opacity: 1;
+    animation: scrollBtnRing 3s ease-in-out infinite;
+}
+#scrollTopBtn:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow:
+        0 14px 48px rgba(56,189,248,0.4),
+        0 2px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+}
+#scrollTopBtn:hover i {
+    animation: scrollArrowBounce 0.6s ease infinite;
+}
+#scrollTopBtn:active {
+    transform: translateY(0) scale(0.9);
+    box-shadow: 0 2px 12px rgba(56,189,248,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition-duration: 0.1s;
+}
+#scrollTopBtn:active i { transform: scale(0.9); }
+@keyframes scrollBtnRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+@keyframes scrollArrowBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* --- Admin Float Button --- */
+#adminFloatBtn {
+    position: fixed; bottom: 30px; left: 30px; z-index: 9997;
+    width: 54px; height: 54px; border-radius: 50%;
+    border: none; cursor: pointer; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 1.2rem; color: #fff;
+    background: linear-gradient(145deg, #a855f7 0%, #7c3aed 100%);
+    box-shadow:
+        0 4px 24px rgba(168,85,247,0.3),
+        0 1px 4px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
+    opacity: 0; visibility: hidden;
+    transform: translateY(25px) scale(0.8);
+    transition: opacity 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.04s, transform 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.04s, visibility 0.45s 0.04s, box-shadow 0.3s;
+}
+#adminFloatBtn i {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+    transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+#adminFloatBtn::before {
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%);
+    opacity: 0; transition: opacity 0.6s;
+}
+#adminFloatBtn::after {
+    content: ''; position: absolute; inset: -3px; border-radius: 50%;
+    border: 1.5px solid rgba(168,85,247,0.2);
+    opacity: 0; transition: opacity 0.5s;
+}
+#adminFloatBtn.visible {
+    opacity: 1; visibility: visible; transform: translateY(0) scale(1);
+}
+#adminFloatBtn.visible::before { opacity: 1; }
+#adminFloatBtn.visible::after {
+    opacity: 1;
+    animation: adminFloatRing 3s ease-in-out infinite;
+}
+#adminFloatBtn.cheat-unlocked {
+    animation: cheatPop 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+#adminFloatBtn.cheat-unlocked::before {
+    background: radial-gradient(circle, rgba(168,85,247,0.3) 0%, transparent 70%);
+}
+@keyframes cheatPop {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); opacity: 1; }
+}
+#adminFloatBtn:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow:
+        0 14px 48px rgba(168,85,247,0.4),
+        0 2px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+}
+#adminFloatBtn:hover i {
+    animation: lockShake 0.6s ease infinite;
+}
+#adminFloatBtn:active {
+    transform: translateY(0) scale(0.9);
+    box-shadow: 0 2px 12px rgba(168,85,247,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition-duration: 0.1s;
+}
+#adminFloatBtn:active i { transform: scale(0.9); }
+@keyframes adminFloatRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+@keyframes lockShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px) rotate(-3deg); }
+    75% { transform: translateX(2px) rotate(3deg); }
+}
+
+/* --- Reviews Button --- */
+#reviewsBtn {
+    position: fixed; bottom: 30px; right: 30px; z-index: 9996;
+    width: 56px; height: 56px; border-radius: 50%;
+    border: none; cursor: pointer; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 1.5rem; color: #000a14;
+    background: linear-gradient(145deg, #ffd700 0%, #ff8800 100%);
+    box-shadow:
+        0 4px 24px rgba(255,200,0,0.3),
+        0 1px 4px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.4),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
+    opacity: 0; visibility: hidden;
+    transform: translateY(25px) scale(0.8);
+    transition: opacity 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.08s, transform 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.08s, visibility 0.45s 0.08s, box-shadow 0.3s;
+}
+#reviewsBtn i {
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+    transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+#reviewsBtn::before {
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,200,0,0.12) 0%, transparent 70%);
+    opacity: 0; transition: opacity 0.6s;
+}
+#reviewsBtn::after {
+    content: ''; position: absolute; inset: -3px; border-radius: 50%;
+    border: 1.5px solid rgba(255,200,0,0.2);
+    opacity: 0; transition: opacity 0.5s;
+}
+#reviewsBtn.visible {
+    opacity: 1; visibility: visible; transform: translateY(0) scale(1);
+}
+#reviewsBtn.visible::before { opacity: 1; }
+#reviewsBtn.visible::after {
+    opacity: 1;
+    animation: reviewsBtnRing 3s ease-in-out infinite;
+}
+#reviewsBtn:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow:
+        0 14px 48px rgba(255,200,0,0.4),
+        0 2px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+}
+#reviewsBtn:hover i {
+    animation: starPulse 0.8s ease infinite;
+}
+#reviewsBtn:active {
+    transform: translateY(0) scale(0.9);
+    box-shadow: 0 2px 12px rgba(255,200,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition-duration: 0.1s;
+}
+#reviewsBtn:active i { transform: scale(0.9); }
+@keyframes reviewsBtnRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+@keyframes starPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.15) rotate(-6deg); }
+    75% { transform: scale(1.15) rotate(6deg); }
+}
+@keyframes reviewsBtnRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.3); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+@media (max-width: 900px) {
+    #scrollTopBtn { width: 50px; height: 50px; font-size: 1.15rem; bottom: 150px; right: 26px; }
+    #adminFloatBtn { width: 50px; height: 50px; font-size: 1.05rem; bottom: 26px; left: 26px; }
+    #reviewsBtn { width: 50px; height: 50px; font-size: 1.3rem; bottom: 26px; right: 26px; }
+}
+@media (max-width: 768px) {
+    #scrollTopBtn { width: 46px; height: 46px; font-size: 1.05rem; bottom: 136px; right: 22px; }
+    #scrollTopBtn::after { inset: -2px; }
+    #scrollTopBtn::before { inset: -4px; }
+    #adminFloatBtn { width: 46px; height: 46px; font-size: 0.95rem; bottom: 22px; left: 22px; }
+    #adminFloatBtn::after { inset: -2px; }
+    #adminFloatBtn::before { inset: -4px; }
+    #reviewsBtn { width: 46px; height: 46px; font-size: 1.2rem; bottom: 22px; right: 22px; }
+    #reviewsBtn::after { inset: -2px; }
+    #reviewsBtn::before { inset: -4px; }
+}
+@media (max-width: 480px) {
+    #scrollTopBtn { width: 42px; height: 42px; font-size: 0.95rem; bottom: 120px; right: 18px; }
+    #adminFloatBtn { width: 42px; height: 42px; font-size: 0.85rem; bottom: 18px; left: 18px; }
+    #reviewsBtn { width: 42px; height: 42px; font-size: 1.1rem; bottom: 18px; right: 18px; }
+}
+@media (max-width: 400px) {
+    #scrollTopBtn { width: 38px; height: 38px; font-size: 0.85rem; bottom: 104px; right: 14px; }
+    #scrollTopBtn::after { display: none; }
+    #adminFloatBtn { width: 38px; height: 38px; font-size: 0.75rem; bottom: 14px; left: 14px; }
+    #adminFloatBtn::after { display: none; }
+    #reviewsBtn { width: 38px; height: 38px; font-size: 0.95rem; bottom: 14px; right: 14px; }
+    #reviewsBtn::after { display: none; }
 }
 
