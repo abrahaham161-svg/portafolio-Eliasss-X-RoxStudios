@@ -1067,6 +1067,10 @@
                         setCooldown();
                         startCooldownTimer();
                         this.reset();
+                        const customText = form.querySelector('.custom-select-text');
+                        if (customText) customText.textContent = '';
+                        const customSel = form.querySelector('.custom-select.selected');
+                        if (customSel) customSel.classList.remove('selected');
                         form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
                         openModal();
                     } else {
