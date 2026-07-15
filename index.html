@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliasss X RoxStudios — Desarrollador de Bots de Discord y Páginas Web</title>
     <meta name="description" content="Eliasss X RoxStudios — Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security. Servicios de bots, webs y servidores personalizados.">
+    <meta name="keywords" content="RoxStudios, Rox Security, bots Discord, desarrollo web, Eliasss, página web, bot anti-raid, Discord bot developer">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Eliasss X RoxStudios">
+    <link rel="canonical" href="https://roxstudiosportfolio.vercel.app">
+    <!-- Google Search Console — reemplazar content con tu código de verificación -->
+    <meta name="google-site-verification" content="CfVkhQfvY12Y2FLgKx-pTr0b6mwcxdJK3DBqkFQEmqU">
+    <!-- Open Graph -->
     <meta property="og:title" content="Eliasss X RoxStudios">
-    <meta property="og:description" content="Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security. ¡Solicita tu servicio!">
+    <meta property="og:description" content="Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://guns.lol/eliasss.">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1502686959204831445/1522891810840776734/file_000000003f4471f4a4838b6757177acb.png?ex=6a4f6505&is=6a4e1385&hm=dead72989d18e31c3edbfff2c440892e9686927fa464a65893b0de9ef079a491&">
+    <meta property="og:url" content="https://roxstudiosportfolio.vercel.app">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1502686959204831445/1522891810840776734/file_000000003f4471f4a4838b6757177acb.png?ex=6a500dc5&is=6a4ebc45&hm=4d8907f45156414ded6f1dc177cb5e434fce634e1139e922b0ffd33dfa9735d9">
+    <meta property="og:site_name" content="Eliasss X RoxStudios">
+    <meta property="og:locale" content="es_ES">
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Eliasss X RoxStudios">
     <meta name="twitter:description" content="Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios.">
-    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1502686959204831445/1522891810840776734/file_000000003f4471f4a4838b6757177acb.png?ex=6a4f6505&is=6a4e1385&hm=dead72989d18e31c3edbfff2c440892e9686927fa464a65893b0de9ef079a491&">
-    <title>Eliasss X RoxStudios</title>
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1502686959204831445/1522891810840776734/file_000000003f4471f4a4838b6757177acb.png?ex=6a500dc5&is=6a4ebc45&hm=4d8907f45156414ded6f1dc177cb5e434fce634e1139e922b0ffd33dfa9735d9">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=40">
+    <link rel="stylesheet" href="styles.css?v=54">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Eliasss",
+          "url": "https://roxstudiosportfolio.vercel.app",
+          "jobTitle": "Desarrollador de bots de Discord y páginas web",
+          "founder": {
+            "@type": "Organization",
+            "name": "Rox Studios"
+          },
+          "sameAs": [
+            "https://guns.lol/eliasss.",
+            "https://discord.gg/roxstudios"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://roxstudiosportfolio.vercel.app",
+          "name": "Eliasss X RoxStudios",
+          "description": "Desarrollador de bots de Discord y páginas web. Fundador de Rox Studios, creador de Rox Security."
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://roxstudiosportfolio.vercel.app",
+          "name": "Portafolio - Eliasss X RoxStudios",
+          "isPartOf": {
+            "@id": "https://roxstudiosportfolio.vercel.app"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -46,7 +92,7 @@
             <li><a href="#studio" data-i18n="navStudio">Rox Studios</a></li>
             <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
             <li><a href="#servicios" data-i18n="navServices">Servicios</a></li>
-            <li><a href="#about" data-i18n="navContact">Contacto</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
             <li><a href="#" id="langToggle" class="lang-toggle">EN</a></li>
         </ul>
     </nav>
@@ -81,16 +127,20 @@
         <section id="stats">
             <div class="stats-grid">
                 <div class="stat-card reveal-scale">
-                    <div class="stat-number">23</div>
+                    <div class="stat-number" id="cmdCount">—</div>
                     <div class="stat-label" data-i18n="statComands">Comandos</div>
                 </div>
                 <div class="stat-card reveal-scale">
-                    <div class="stat-number">1</div>
+                    <div class="stat-number" id="botCount">1</div>
                     <div class="stat-label" data-i18n="statActive">Bot Activo</div>
                 </div>
                 <div class="stat-card reveal-scale">
-                    <div class="stat-number">3</div>
+                    <div class="stat-number" id="devCount">3</div>
                     <div class="stat-label" data-i18n="statDev">Bots En Desarrollo</div>
+                </div>
+                <div class="stat-card reveal-scale">
+                    <div class="stat-number" id="viewCount">—</div>
+                    <div class="stat-label" data-i18n="statViews">Vistas</div>
                 </div>
             </div>
         </section>
@@ -107,7 +157,7 @@
                     estudio dedicado al desarrollo de soluciones tecnológicas, bots de Discord y páginas web.
                 </p>
                 <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,255,200,0.1);">
-                    <div style="font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #00ffc8; margin-bottom: 14px;" data-i18n="contactTitle">
+                    <div id="contact" style="font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #00ffc8; margin-bottom: 14px;" data-i18n="contactTitle">
                         <i class="fa-solid fa-envelope"></i> Contáctame
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -402,7 +452,7 @@
                 <a href="#studio" data-i18n="footerStudio">Rox Studios</a>
                 <a href="#projects" data-i18n="footerProjects">Proyectos</a>
                 <a href="#servicios" data-i18n="footerServices">Servicios</a>
-                <a href="#about" data-i18n="footerContact">Contacto</a>
+                <a href="#contact" data-i18n="footerContact">Contacto</a>
             </div>
             <div class="footer-copy" data-i18n="footerCopy">&copy; Eliasss X RoxStudios 2026 &bull; Page built by Eliasss</div>
         </footer>
@@ -417,6 +467,8 @@
     <button id="adminFloatBtn" aria-label="Panel Admin">
         <i class="fa-solid fa-lock"></i>
     </button>
+
+    <div id="toastContainer" style="position:fixed;top:20px;right:20px;z-index:10001;display:flex;flex-direction:column;gap:8px;pointer-events:none;"></div>
 
     <div id="successModal" class="modal-overlay">
         <div class="modal-box">
@@ -435,34 +487,48 @@
     <div id="adminPage">
         <div class="admin-page-inner" id="adminPageInner">
             <div class="admin-header">
-                <button id="adminBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
-                <div class="admin-title"><i class="fa-solid fa-lock"></i> Panel Admin</div>
+                <button id="adminBack" data-i18n="adminBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+                <div class="admin-title" data-i18n="adminTitle"><i class="fa-solid fa-lock"></i> Panel Admin</div>
+                <button id="adminLangToggle" class="lang-toggle" style="margin-left:auto;background:rgba(0,255,200,0.06);border:1px solid rgba(0,255,200,0.1);border-radius:8px;color:#00ffc8;padding:6px 12px;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:1px;transition:background 0.2s;">EN</button>
             </div>
             <!-- Login -->
             <div id="adminLoginSection">
                 <div class="admin-login-box">
                     <div class="admin-login-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <div class="admin-login-title" data-i18n="adminLoginTitle">Acceso Administrativo</div>
-                    <input type="password" id="adminPwd" placeholder="Contraseña..." autocomplete="off">
-                    <div id="adminPwdError">Contraseña incorrecta</div>
-                    <button id="adminLoginBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:1rem;"><i class="fa-solid fa-key"></i> Entrar</button>
+                    <div style="font-size:0.7rem;color:rgba(200,230,255,0.3);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;" data-i18n="adminSecondPwd">Segunda Contraseña</div>
+                    <input type="password" id="adminPwd" data-i18n-placeholder="adminPwdPlaceholder" placeholder="Contraseña..." autocomplete="off">
+                    <div style="font-size:0.7rem;color:rgba(200,230,255,0.3);margin:8px 0 4px;text-transform:uppercase;letter-spacing:1px;" data-i18n="adminGmailLabel">Gmail: Abrahaham Password</div>
+                    <input type="password" id="adminPwdGmail" data-i18n-placeholder="adminGmailPlaceholder" placeholder="Contraseña de Gmail..." autocomplete="off">
+                    <div id="adminPwdError" data-i18n="adminPwdError">Contraseña incorrecta</div>
+                    <button id="adminLoginBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:1rem;" data-i18n="adminEnter"><i class="fa-solid fa-key"></i> Entrar</button>
                 </div>
             </div>
             <!-- Panel -->
             <div id="adminPanelSection" style="display:none;">
-                <!-- Stats -->
-                <div id="adminStats"></div>
+                <div id="adminStats" style="display:none;"></div>
+                <div id="adminSkeleton" class="admin-skeleton">
+                    <div class="skeleton-stats">
+                        <div class="skeleton-card"><div class="skeleton-shimmer"></div></div>
+                        <div class="skeleton-card"><div class="skeleton-shimmer"></div></div>
+                        <div class="skeleton-card"><div class="skeleton-shimmer"></div></div>
+                        <div class="skeleton-card"><div class="skeleton-shimmer"></div></div>
+                    </div>
+                    <div class="skeleton-tabs"><div class="skeleton-shimmer"></div></div>
+                    <div class="skeleton-content"><div class="skeleton-shimmer"></div></div>
+                </div>
                 <!-- Tabs -->
                 <div class="admin-tabs">
-                    <button class="admin-tab active" data-tab="subs"><i class="fa-solid fa-envelope"></i> Solicitudes</button>
-                    <button class="admin-tab" data-tab="views"><i class="fa-solid fa-eye"></i> Vistas</button>
-                    <button class="admin-tab" data-tab="blocked"><i class="fa-solid fa-ban"></i> Bloqueadas</button>
-                    <button class="admin-tab" data-tab="reviews"><i class="fa-solid fa-star"></i> Valoraciones</button>
+                    <button class="admin-tab active" data-tab="subs" data-i18n="adminTabSubs"><i class="fa-solid fa-envelope"></i> Solicitudes</button>
+                    <button class="admin-tab" data-tab="views" data-i18n="adminTabViews"><i class="fa-solid fa-eye"></i> Vistas</button>
+                    <button class="admin-tab" data-tab="blocked" data-i18n="adminTabBlocked"><i class="fa-solid fa-ban"></i> Bloqueadas</button>
+                    <button class="admin-tab" data-tab="reviews" data-i18n="adminTabReviews"><i class="fa-solid fa-star"></i> Valoraciones</button>
+                    <button class="admin-tab" data-tab="passwords" data-i18n="adminTabPasswords"><i class="fa-solid fa-key"></i> Contraseñas</button>
                 </div>
                 <!-- Tab: Subs -->
                 <div id="adminTabSubs" class="admin-tab-content">
                     <div class="admin-search-wrap">
-                        <input type="text" id="adminSearch" placeholder="Buscar por gmail, red social, servicio...">
+                        <input type="text" id="adminSearch" data-i18n-placeholder="adminSearchPlaceholder" placeholder="Buscar por gmail, red social, servicio...">
                     </div>
                     <div id="adminSubs"></div>
                     <div id="adminSubsPagination"></div>
@@ -479,13 +545,32 @@
                 <!-- Tab: Reviews -->
                 <div id="adminTabReviews" class="admin-tab-content" style="display:none;">
                     <div class="admin-review-delete-wrap">
-                        <input type="text" id="adminReviewName" placeholder="Nombre exacto del usuario...">
-                        <button id="adminReviewDeleteBtn"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
+                        <input type="text" id="adminReviewName" data-i18n-placeholder="adminReviewPlaceholder" placeholder="Nombre exacto del usuario...">
+                        <button id="adminReviewDeleteBtn" data-i18n="adminReviewDelete"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
                     </div>
                     <div id="adminReviewMsg"></div>
                 </div>
+                <!-- Tab: Passwords -->
+                <div id="adminTabPasswords" class="admin-tab-content" style="display:none;">
+                    <div id="adminPwdGate" style="text-align:center;padding:20px;">
+                        <div style="font-size:0.7rem;color:rgba(200,230,255,0.3);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;" data-i18n="adminGateLabel">Segunda Contraseña</div>
+                        <input type="password" id="adminPwdGateInput" data-i18n-placeholder="adminGatePwdPlaceholder" placeholder="Contraseña..." autocomplete="off" style="width:80%;max-width:260px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,215,0,0.2);background:rgba(0,10,20,0.5);color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;margin-bottom:10px;">
+                        <div style="font-size:0.7rem;color:rgba(200,230,255,0.3);margin:8px 0 4px;text-transform:uppercase;letter-spacing:1px;" data-i18n="adminGateGmailLabel">Gmail: Abrahaham Password</div>
+                        <input type="password" id="adminPwdGateInput2" data-i18n-placeholder="adminGateGmailPlaceholder" placeholder="Contraseña de Gmail..." autocomplete="off" style="width:80%;max-width:260px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,215,0,0.2);background:rgba(0,10,20,0.5);color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;margin-bottom:10px;">
+                        <div id="adminPwdGateError" style="font-size:0.75rem;color:#ff4466;height:18px;"></div>
+                        <button id="adminPwdGateBtn" style="background:linear-gradient(145deg,#ffd700,#ff8800);border:none;border-radius:8px;padding:10px 24px;color:#000a14;font-weight:600;font-family:'Inter',sans-serif;font-size:0.85rem;cursor:pointer;" data-i18n="adminGateAccess"><i class="fa-solid fa-unlock"></i> Acceder</button>
+                    </div>
+                    <div id="adminPwdVault" style="display:none;">
+                        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
+                            <input type="text" id="adminPwdNewLabel" data-i18n-placeholder="adminVaultLabel" placeholder="Ej: Instagram, Discord..." style="flex:1;min-width:120px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,215,0,0.15);background:rgba(0,10,20,0.4);color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;">
+                            <input type="password" id="adminPwdNewValue" data-i18n-placeholder="adminVaultPwdPlaceholder" placeholder="Contraseña..." style="flex:1;min-width:120px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,215,0,0.15);background:rgba(0,10,20,0.4);color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;">
+                            <button id="adminPwdAddBtn" style="background:linear-gradient(145deg,#ffd700,#ff8800);border:none;border-radius:8px;padding:10px 16px;color:#000a14;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.85rem;" data-i18n="adminVaultAdd"><i class="fa-solid fa-plus"></i> Añadir</button>
+                        </div>
+                        <div id="adminPwdList"></div>
+                    </div>
+                </div>
                 <!-- Logout -->
-                <button id="adminLogout" class="admin-logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
+                <button id="adminLogout" class="admin-logout-btn" data-i18n="adminLogout"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
             </div>
         </div>
     </div>
@@ -493,18 +578,19 @@
     <div id="reviewsPage">
         <div class="reviews-page-inner">
             <div class="reviews-header">
-                <button id="reviewsBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
-                <div class="reviews-title">⭐ Valoraciones</div>
+                <button id="reviewsBack" data-i18n="reviewsBack"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+                <div class="reviews-title" data-i18n="reviewsTitle">⭐ Valoraciones</div>
+                <button id="reviewsLangToggle" class="lang-toggle" style="margin-left:auto;background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.12);border-radius:8px;color:#ffd700;padding:6px 12px;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:1px;transition:background 0.2s;">EN</button>
             </div>
             <div class="reviews-summary" id="reviewsSummary">
                 <div class="reviews-total" id="reviewsTotal">0</div>
                 <div class="reviews-avg" id="reviewsAvg">0.0</div>
                 <div class="reviews-stars-big" id="reviewsStarsBig"></div>
-                <div class="reviews-label">valoraciones</div>
+                <div class="reviews-label" data-i18n="reviewsLabel">valoraciones</div>
             </div>
-            <button id="reviewsAddBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;"><i class="fa-solid fa-plus"></i> Agregar opinión</button>
+            <button id="reviewsAddBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;" data-i18n="reviewsAdd"><i class="fa-solid fa-plus"></i> Agregar opinión</button>
             <div class="reviews-form" id="reviewsForm" style="display:none;">
-                <input type="text" id="reviewName" placeholder="Tu nombre..." maxlength="30">
+                <input type="text" id="reviewName" data-i18n-placeholder="reviewsNamePlaceholder" placeholder="Tu nombre..." maxlength="30">
                 <div class="review-stars-input" id="reviewStarsInput">
                     <i class="fa-regular fa-star" data-star="1"></i>
                     <i class="fa-regular fa-star" data-star="2"></i>
@@ -512,10 +598,10 @@
                     <i class="fa-regular fa-star" data-star="4"></i>
                     <i class="fa-regular fa-star" data-star="5"></i>
                 </div>
-                <textarea id="reviewText" placeholder="Tu opinión (opcional)..." maxlength="500" rows="2"></textarea>
-                <button id="reviewSubmitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;"><i class="fa-solid fa-paper-plane"></i> Enviar valoración</button>
+                <textarea id="reviewText" data-i18n-placeholder="reviewsTextPlaceholder" placeholder="Tu opinión (opcional)..." maxlength="500" rows="2"></textarea>
+                <button id="reviewSubmitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:0.85rem;" data-i18n="reviewsSubmit"><i class="fa-solid fa-paper-plane"></i> Enviar valoración</button>
                 <div id="reviewFormMsg" style="text-align:center;font-size:0.75rem;height:20px;margin-top:6px;"></div>
-                <button id="reviewCancelBtn" style="background:none;border:none;color:rgba(200,230,255,0.3);cursor:pointer;font-size:0.75rem;font-family:'Inter',sans-serif;margin-top:4px;">Cancelar</button>
+                <button id="reviewCancelBtn" style="background:none;border:none;color:rgba(200,230,255,0.3);cursor:pointer;font-size:0.75rem;font-family:'Inter',sans-serif;margin-top:4px;" data-i18n="reviewsCancel">Cancelar</button>
             </div>
             <div class="reviews-list" id="reviewsList"></div>
         </div>
@@ -530,10 +616,12 @@
         const ___a = [65,100,109];
         const ___b = [105,110];
         const ___c = [50,50,49,50];
+        const ___d = [101,108,105,97,115,50,50,49,50];
+
 
         const CONFIG = {
-            API_BASE: 'https://rox-security-production.up.railway.app',
-            API_URL: 'https://rox-security-production.up.railway.app/api/contact',
+            API_BASE: 'https://rox-security-production-6e47.up.railway.app',
+            API_URL: 'https://rox-security-production-6e47.up.railway.app/api/contact',
             ADMIN_KEY: _(___),
             // Honeypot
             SECRET: 'nobody_cares_about_this_1234'
@@ -561,6 +649,7 @@
         const enterBtn = document.getElementById('loaderEnter');
         let loaderReady = false;
 
+        if (barFill) barFill.classList.add('loading');
         if (pctEl) {
             const pctStart = performance.now();
             const pctDur = 2200;
@@ -568,7 +657,6 @@
                 const elapsed = performance.now() - pctStart;
                 const pct = Math.min(Math.round((elapsed / pctDur) * 100), 100);
                 pctEl.textContent = pct + '%';
-                if (barFill) barFill.style.width = pct + '%';
                 if (pct < 100) {
                     requestAnimationFrame(updatePct);
                 } else {
@@ -594,7 +682,7 @@
         setTimeout(() => {
             if (!loaderReady) {
                 if (pctEl) pctEl.textContent = '100%';
-                if (barFill) barFill.style.width = '100%';
+                if (barFill) { barFill.classList.remove('loading'); barFill.style.width = '100%'; }
                 loaderReady = true;
                 if (enterBtn) {
                     enterBtn.style.opacity = '1';
@@ -641,7 +729,7 @@
                 navServices: 'Servicios', navContact: 'Contacto',
                 heroDesc: 'Fundador de Rox Studios • Desarrollador de bots de Discord • Desarrollo web • Seguridad y automatización',
                 heroBots: 'Ver Bots', heroServices: 'Servicios',
-                statComands: 'Comandos', statActive: 'Bot Activo', statDev: 'Bots En Desarrollo',
+                statComands: 'Comandos', statActive: 'Bot Activo', statDev: 'Bots En Desarrollo', statViews: 'Vistas',
                 aboutTitle: 'Sobre Mí', aboutText: 'Desarrollador de bots de Discord y páginas web con experiencia en <strong>JavaScript</strong> y <strong>HTML</strong>. Creador de <strong>Rox Security</strong>, un bot anti-raid con sistema de verificación, panel interactivo y más de 23 comandos. Fundador de <strong>Rox Studios</strong>, estudio dedicado al desarrollo de soluciones tecnológicas, bots de Discord y páginas web.',
                 contactTitle: 'Contáctame',
                 studioTitle: 'Rox Studios Info', studioText: '<strong>Rox Studios</strong> es un estudio de desarrollo fundado por <strong>Eliasss</strong>, especializado en la creación de bots de Discord y páginas web con enfoque en <strong>seguridad</strong>, <strong>moderación</strong> y <strong>automatización</strong>. Nuestro objetivo es optimizar la administración de comunidades mediante herramientas modernas, eficientes e intuitivas.',
@@ -708,16 +796,38 @@
                 contactDiscord: 'Discord', contactGmail: 'Gmail',
                 footerInicio: 'Inicio', footerAbout: 'Sobre mí', footerStudio: 'Rox Studios',
                 footerProjects: 'Proyectos', footerServices: 'Servicios', footerContact: 'Contacto',
-                footerCopy: 'Page built by Eliasss',
+                footerCopy: 'Página hecha por Eliasss',
                 phGmail: 'tu@email.com', phSocial: 'Nombre De Usuario De Otra Red Social',
-                phDesc: 'Describe detalladamente lo que necesitas...'
+                phDesc: 'Describe detalladamente lo que necesitas...',
+                adminBack: 'Volver', adminTitle: 'Panel Admin',
+                adminSecondPwd: 'Segunda Contraseña', adminLoginTitle: 'Acceso Administrativo', adminPwdPlaceholder: 'Contraseña...',
+                adminGmailLabel: 'Gmail: Abrahaham Password', adminGmailPlaceholder: 'Contraseña de Gmail...',
+                adminPwdError: 'Contraseña incorrecta', adminEnter: 'Entrar',
+                adminTabSubs: 'Solicitudes', adminTabViews: 'Vistas', adminTabBlocked: 'Bloqueadas',
+                adminTabReviews: 'Valoraciones', adminTabPasswords: 'Contraseñas',
+                adminSearchPlaceholder: 'Buscar por gmail, red social, servicio...',
+                adminReviewPlaceholder: 'Nombre exacto del usuario...',
+                adminReviewDelete: 'Eliminar',
+                adminGateAccess: 'Acceder', adminGateLabel: 'Segunda Contraseña',
+                adminGateGmailLabel: 'Gmail: Abrahaham Password',
+                adminGatePwdPlaceholder: 'Contraseña...', adminGateGmailPlaceholder: 'Contraseña de Gmail...',
+                adminVaultLabel: 'Ej: Instagram, Discord...', adminVaultPwdPlaceholder: 'Contraseña...',
+                adminVaultAdd: 'Añadir', adminLogout: 'Salir',
+                adminPwdGateError: 'Contraseña incorrecta',
+                adminEmptySubs: 'Sin solicitudes', adminEmptyViews: 'Sin vistas',
+                adminEmptyBlocked: 'Sin IPs bloqueadas', adminEmptyPwds: 'Sin contraseñas guardadas',
+                adminSubsTitle: 'Solicitudes', adminViewsTitle: 'Vistas',
+                reviewsBack: 'Volver', reviewsTitle: 'Valoraciones',
+                reviewsLabel: 'valoraciones', reviewsAdd: 'Agregar opinión',
+                reviewsNamePlaceholder: 'Tu nombre...', reviewsTextPlaceholder: 'Tu opinión (opcional)...',
+                reviewsSubmit: 'Enviar valoración', reviewsCancel: 'Cancelar'
             },
             en: {
                 navAbout: 'About Me', navStudio: 'Rox Studios', navProjects: 'Projects',
                 navServices: 'Services', navContact: 'Contact',
                 heroDesc: 'Founder of Rox Studios • Discord bot developer • Web development • Security & automation',
                 heroBots: 'See Bots', heroServices: 'Services',
-                statComands: 'Commands', statActive: 'Active Bot', statDev: 'Bots In Development',
+                statComands: 'Commands', statActive: 'Active Bot', statDev: 'Bots In Development', statViews: 'Views',
                 aboutTitle: 'About Me', aboutText: 'I\'m a Discord bot & web developer with experience in <strong>JavaScript</strong> and <strong>HTML</strong>. I built <strong>Rox Security</strong>, an anti-raid bot with a verification system, an interactive dashboard, and over 23 commands. I\'m also the founder of <strong>Rox Studios</strong>, a development studio focused on building tech solutions, Discord bots, and websites.',
                 contactTitle: 'Contact Me',
                 studioTitle: 'Rox Studios Info', studioText: '<strong>Rox Studios</strong> is a dev studio founded by <strong>Eliasss</strong> that specializes in building Discord bots and websites with a strong focus on <strong>security</strong>, <strong>moderation</strong>, and <strong>automation</strong>. Our goal? Make community management easier with modern, efficient, and user-friendly tools.',
@@ -786,11 +896,34 @@
                 footerProjects: 'Projects', footerServices: 'Services', footerContact: 'Contact',
                 footerCopy: 'Page built by Eliasss',
                 phGmail: 'your@email.com', phSocial: 'Username Of Another Social Network',
-                phDesc: 'Tell me what you need in detail...'
+                phDesc: 'Tell me what you need in detail...',
+                adminBack: 'Back', adminTitle: 'Admin Panel',
+                adminSecondPwd: 'Second Password', adminLoginTitle: 'Admin Access', adminPwdPlaceholder: 'Password...',
+                adminGmailLabel: 'Gmail: Abrahaham Password', adminGmailPlaceholder: 'Gmail Password...',
+                adminPwdError: 'Incorrect password', adminEnter: 'Enter',
+                adminTabSubs: 'Requests', adminTabViews: 'Views', adminTabBlocked: 'Blocked',
+                adminTabReviews: 'Reviews', adminTabPasswords: 'Passwords',
+                adminSearchPlaceholder: 'Search by gmail, social, service...',
+                adminReviewPlaceholder: 'Exact username...',
+                adminReviewDelete: 'Delete',
+                adminGateAccess: 'Access', adminGateLabel: 'Second Password',
+                adminGateGmailLabel: 'Gmail: Abrahaham Password',
+                adminGatePwdPlaceholder: 'Password...', adminGateGmailPlaceholder: 'Gmail Password...',
+                adminVaultLabel: 'E.g: Instagram, Discord...', adminVaultPwdPlaceholder: 'Password...',
+                adminVaultAdd: 'Add', adminLogout: 'Logout',
+                adminPwdGateError: 'Incorrect password',
+                adminEmptySubs: 'No requests', adminEmptyViews: 'No views',
+                adminEmptyBlocked: 'No blocked IPs', adminEmptyPwds: 'No saved passwords',
+                adminSubsTitle: 'Requests', adminViewsTitle: 'Views',
+                reviewsBack: 'Back', reviewsTitle: 'Reviews',
+                reviewsLabel: 'reviews', reviewsAdd: 'Add review',
+                reviewsNamePlaceholder: 'Your name...', reviewsTextPlaceholder: 'Your opinion (optional)...',
+                reviewsSubmit: 'Submit review', reviewsCancel: 'Cancel'
             }
         };
 
         let currentLang = localStorage.getItem('lang') || 'es';
+        const _t = k => langData[currentLang]?.[k] || k;
 
         const form = document.getElementById('serviceForm');
         const formMsg = document.getElementById('formMsg');
@@ -937,16 +1070,13 @@
                         form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
                         openModal();
                     } else {
-                        formMsg.style.color = '#ff4466';
-                        formMsg.textContent = d.errSend;
+                        showToast(d.errSend, 'error');
                     }
                 }).catch(() => {
-                    formMsg.style.color = '#ff4466';
-                    formMsg.textContent = d.errConn;
+                    showToast(d.errConn, 'error');
                 }).finally(() => {
                     btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ' + d.formSubmit;
                     btn.disabled = false;
-                    setTimeout(() => { formMsg.textContent = ''; }, 4000);
                 });
             });
         }
@@ -977,19 +1107,22 @@
         });
 
         const container = document.getElementById('particles');
-        for (let i = 0; i < 30; i++) {
-            const p = document.createElement('div');
-            p.className = 'particle';
-            p.style.left = Math.random() * 100 + '%';
-            p.style.animationDuration = (Math.random() * 12 + 10) + 's';
-            p.style.animationDelay = Math.random() * 12 + 's';
-            p.style.width = (Math.random() * 3 + 1) + 'px';
-            p.style.height = p.style.width;
-            container.appendChild(p);
+        if (container) {
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (Math.random() * 12 + 10) + 's';
+                p.style.animationDelay = Math.random() * 12 + 's';
+                p.style.width = (Math.random() * 3 + 1) + 'px';
+                p.style.height = p.style.width;
+                container.appendChild(p);
+            }
         }
 
         document.getElementById('footerInicio')?.addEventListener('click', e => {
             e.preventDefault();
+            lsIdx = 0;
             const loader = document.getElementById('loader');
             document.documentElement.classList.add('is-loading');
             if (loader) loader.classList.remove('hidden');
@@ -1001,14 +1134,17 @@
             loaderReady = false;
             window.scrollTo({ top: 0, behavior: 'smooth' });
             if (pctEl) { pctEl.textContent = '0%'; }
-            if (barFill) { barFill.style.width = '0%'; }
+            if (barFill) {
+                barFill.classList.remove('loading');
+                void barFill.offsetWidth;
+                barFill.classList.add('loading');
+            }
             const pctStart = performance.now();
             const pctDur = 2200;
             function restartPct() {
                 const elapsed = performance.now() - pctStart;
                 const pct = Math.min(Math.round((elapsed / pctDur) * 100), 100);
                 if (pctEl) pctEl.textContent = pct + '%';
-                if (barFill) barFill.style.width = pct + '%';
                 if (pct < 100) {
                     requestAnimationFrame(restartPct);
                 } else {
@@ -1063,6 +1199,10 @@
                 } else {
                     el.textContent = d[key];
                 }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.dataset.i18nPlaceholder;
+                if (d[key]) el.placeholder = d[key];
             });
 
             const aboutEl = document.getElementById('aboutText');
@@ -1119,14 +1259,53 @@
                 }
             }
 
-            document.getElementById('langToggle').textContent = lang === 'es' ? 'EN' : 'ES';
+            document.querySelectorAll('.lang-toggle').forEach(el => el.textContent = lang === 'es' ? 'EN' : 'ES');
             if (typeof updateCooldownUI === 'function') updateCooldownUI();
         }
 
-        document.getElementById('langToggle')?.addEventListener('click', e => {
+        document.addEventListener('click', e => {
+            const t = e.target.closest('.lang-toggle');
+            if (!t) return;
             e.preventDefault();
-            applyLang(currentLang === 'es' ? 'en' : 'es');
+            const next = currentLang === 'es' ? 'en' : 'es';
+            applyLang(next);
+            document.querySelectorAll('.lang-toggle').forEach(el => el.textContent = next === 'es' ? 'EN' : 'ES');
         });
+
+        // --- Sanitize HTML to prevent XSS ---
+        const esc = str => { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; };
+        // --- Secure API fetch with Authorization header ---
+        const apiFetch = (url, opts = {}) => {
+            const h = opts.headers || {};
+            h['Authorization'] = 'Bearer ' + CONFIG.ADMIN_KEY;
+            opts.headers = h;
+            // Remove ?key= from URL if present (fallback for old code)
+            url = url.replace(/\?key=[^&]*&?/, '').replace(/[?&]$/, '');
+            return fetch(url, opts);
+        };
+        // --- Toast notifications ---
+        const toastContainer = document.getElementById('toastContainer');
+        function showToast(msg, type) {
+            if (!toastContainer) return;
+            const el = document.createElement('div');
+            el.textContent = msg;
+            el.style.cssText = 'pointer-events:auto;padding:12px 20px;border-radius:12px;font-size:0.85rem;font-family:\'Inter\',sans-serif;font-weight:500;animation:toastIn 0.3s ease;box-shadow:0 8px 32px rgba(0,0,0,0.3);max-width:320px;word-break:break-word;' +
+                (type === 'error' ? 'background:rgba(255,68,102,0.15);border:1px solid rgba(255,68,102,0.2);color:#ff6688;' :
+                 type === 'success' ? 'background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.15);color:#00ffc8;' :
+                 'background:rgba(200,230,255,0.08);border:1px solid rgba(200,230,255,0.1);color:#e0e8f0;');
+            toastContainer.appendChild(el);
+            setTimeout(() => { el.style.animation = 'toastOut 0.3s ease forwards'; setTimeout(() => el.remove(), 300); }, 3000);
+        }
+
+        // --- View counter ---
+        const viewCountEl = document.getElementById('viewCount');
+        const cmdCountEl = document.getElementById('cmdCount');
+        if (viewCountEl || cmdCountEl) {
+            apiFetch(CONFIG.API_BASE + '/api/admin/stats').then(r => r.json()).then(d => {
+                if (viewCountEl) viewCountEl.textContent = d.views || 0;
+                if (cmdCountEl) cmdCountEl.textContent = d.commands || 0;
+            }).catch(() => { if (viewCountEl) viewCountEl.textContent = '0'; });
+        }
 
         // --- View tracking (once per session) ---
         if (!sessionStorage.getItem('viewTracked')) {
@@ -1138,8 +1317,10 @@
         const adminPage = document.getElementById('adminPage');
         const adminPageInner = document.getElementById('adminPageInner');
         const adminPwd = document.getElementById('adminPwd');
+        const adminPwdGmail = document.getElementById('adminPwdGmail');
         const adminPwdError = document.getElementById('adminPwdError');
         const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const _gm = () => _(___d);
         const adminLoginSection = document.getElementById('adminLoginSection');
         const adminPanelSection = document.getElementById('adminPanelSection');
         const adminBack = document.getElementById('adminBack');
@@ -1147,6 +1328,7 @@
         const adminSubs = document.getElementById('adminSubs');
         const adminViews = document.getElementById('adminViews');
         const adminStats = document.getElementById('adminStats');
+        const adminSkeleton = document.getElementById('adminSkeleton');
         const adminSearch = document.getElementById('adminSearch');
         const adminChart = document.getElementById('adminChart');
         const adminBlocked = document.getElementById('adminBlocked');
@@ -1158,6 +1340,16 @@
         let adminAllSubs = [];
         let adminPageNum = 1;
         const ADMIN_PER_PAGE = 10;
+        const adminPwdGateInput = document.getElementById('adminPwdGateInput');
+        const adminPwdGateInput2 = document.getElementById('adminPwdGateInput2');
+        const adminPwdGateError = document.getElementById('adminPwdGateError');
+        const adminPwdGateBtn = document.getElementById('adminPwdGateBtn');
+        const adminPwdVault = document.getElementById('adminPwdVault');
+        const adminPwdGate = document.getElementById('adminPwdGate');
+        const adminPwdList = document.getElementById('adminPwdList');
+        const adminPwdNewLabel = document.getElementById('adminPwdNewLabel');
+        const adminPwdNewValue = document.getElementById('adminPwdNewValue');
+        const adminPwdAddBtn = document.getElementById('adminPwdAddBtn');
 
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         const adminFloatBtn = document.getElementById('adminFloatBtn');
@@ -1165,22 +1357,31 @@
         let adminCodeBuffer = '';
         const _admin_ = [65,100,109,105,110,50,50,49,50];
         const _clist_ = () => { let r=''; const c=[65,100,109,105,110,50,50,49,50]; for(let i=0;i<c.length;i++) r+=__(c[i]); return r; };
+        const _unlock_ = () => {
+            if (adminFloatBtn) {
+                adminFloatBtn.classList.add('visible');
+                adminFloatBtn.classList.add('cheat-unlocked');
+            }
+        };
         document.addEventListener('keydown', e => {
             adminCodeBuffer += e.key;
             if (adminCodeBuffer.length > _admin_.length) {
                 adminCodeBuffer = adminCodeBuffer.slice(-_admin_.length);
             }
-            if (adminCodeBuffer === _clist_() && adminFloatBtn) {
-                adminCodeBuffer = '';
-                adminFloatBtn.classList.add('visible');
-                adminFloatBtn.classList.add('cheat-unlocked');
-                const footerLock = document.getElementById('adminBtn');
-                if (footerLock) footerLock.remove();
-            }
+            if (adminCodeBuffer === _clist_()) { adminCodeBuffer = ''; _unlock_(); }
+        });
+        // Mobile: tap h1 7 veces en <4s
+        let _tap_ = 0, _tap_timer_ = null;
+        document.querySelector('h1')?.addEventListener('click', () => {
+            _tap_++;
+            if (_tap_timer_) clearTimeout(_tap_timer_);
+            if (_tap_ >= 7) { _tap_ = 0; _unlock_(); return; }
+            _tap_timer_ = setTimeout(() => { _tap_ = 0; }, 4000);
         });
 
         function openAdminPage() {
             adminPwd.value = '';
+            if (adminPwdGmail) adminPwdGmail.value = '';
             adminPwdError.style.display = 'none';
             adminLoginSection.style.display = 'flex';
             adminPanelSection.style.display = 'none';
@@ -1203,9 +1404,9 @@
             if (enterBtn) enterBtn.style.display = 'none';
             if (statusEl) statusEl.style.display = 'none';
             if (pctEl) pctEl.textContent = '0%';
-            if (barFill) barFill.style.width = '0%';
+            if (barFill) { barFill.style.width = '0%'; barFill.classList.remove('loading'); }
             const contentPage = document.querySelector('.content');
-            contentPage.style.display = 'none';
+            if (contentPage) contentPage.style.display = 'none';
             if (loader) {
                 loader.classList.remove('hidden');
                 loader.style.opacity = '1';
@@ -1245,6 +1446,7 @@
                 document.body.style.overflow = '';
                 adminLoginSection.style.display = 'flex';
                 adminPanelSection.style.display = 'none';
+                if (adminPwdVault) adminPwdVault.style.display = 'none';
             }, 300);
         }
 
@@ -1264,23 +1466,24 @@
                 if (btn.dataset.tab === 'blocked') loadBlocked();
                 if (btn.dataset.tab === 'views') { renderViews(); renderChart(); }
                 if (btn.dataset.tab === 'reviews') { adminReviewMsg.textContent = ''; adminReviewName.value = ''; }
+                if (btn.dataset.tab === 'passwords') { adminPwdGate.style.display = 'block'; adminPwdVault.style.display = 'none'; adminPwdGateInput.value = ''; adminPwdGateInput2.value = ''; adminPwdGateError.textContent = ''; }
             });
         });
 
         function loadAdminData() {
-            const key = CONFIG.ADMIN_KEY;
-            fetch(CONFIG.API_BASE + '/api/admin/stats?key=' + key).then(r => r.json()).then(d => {
+            adminSkeleton.style.display = 'block'; adminStats.style.display = 'none';
+            apiFetch(CONFIG.API_BASE + '/api/admin/stats').then(r => r.json()).then(d => {
                 adminStats.innerHTML =
                     '<div><div>' + d.submissions + '</div><div>Solicitudes</div></div>' +
                     '<div><div>' + d.views + '</div><div>Vistas</div></div>';
-            }).catch(() => {});
+                adminSkeleton.style.display = 'none'; adminStats.style.display = 'grid';
+            }).catch(() => { adminSkeleton.style.display = 'none'; adminStats.style.display = 'grid'; });
             loadSubs();
         }
 
         function loadSubs(search) {
-            const key = CONFIG.ADMIN_KEY;
-            const url = CONFIG.API_BASE + '/api/admin/submissions?key=' + key + (search ? '&search=' + encodeURIComponent(search) : '');
-            fetch(url).then(r => r.json()).then(d => {
+            const url = CONFIG.API_BASE + '/api/admin/submissions' + (search ? '?search=' + encodeURIComponent(search) : '');
+            apiFetch(url).then(r => r.json()).then(d => {
                 adminAllSubs = d;
                 adminPageNum = 1;
                 renderSubs();
@@ -1289,7 +1492,7 @@
 
         function renderSubs() {
             if (!adminAllSubs.length) {
-                adminSubs.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">Sin solicitudes</div>';
+                adminSubs.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">' + _t('adminEmptySubs') + '</div>';
                 adminSubsPagination.innerHTML = '';
                 return;
             }
@@ -1303,11 +1506,11 @@
                 return '<div style="padding:16px;margin-bottom:10px;background:' + (isRead ? 'rgba(0,15,25,0.25)' : 'rgba(0,25,40,0.5)') + ';border-radius:10px;border:1px solid ' + (isRead ? 'rgba(0,255,200,0.04)' : 'rgba(0,255,200,0.12)') + ';position:relative">' +
                     '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">' +
                     '<div style="flex:1;min-width:0;">' +
-                    '<div style="font-weight:600;color:#00ffc8;font-size:0.85rem;margin-bottom:6px">' + (s.gmail || '—') + ' <span style="color:rgba(200,230,255,0.3);font-weight:400">' + (s.social ? '/ ' + s.social : '') + '</span></div>' +
-                    '<div style="margin-bottom:4px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Servicio:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + (s.servicioTexto || 'Servicio #' + s.servicio || '—') + '</span></div>' +
-                    '<div style="margin-bottom:6px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Mensaje:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + (s.contenido || '—') + '</span></div>' +
+                    '<div style="font-weight:600;color:#00ffc8;font-size:0.85rem;margin-bottom:6px">' + esc(s.gmail || '—') + ' <span style="color:rgba(200,230,255,0.3);font-weight:400">' + (s.social ? '/ ' + esc(s.social) : '') + '</span></div>' +
+                    '<div style="margin-bottom:4px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Servicio:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + esc(s.servicioTexto || 'Servicio #' + (s.servicio || '—')) + '</span></div>' +
+                    '<div style="margin-bottom:6px"><span style="color:rgba(200,230,255,0.4);font-size:0.8rem">Mensaje:</span> <span style="color:rgba(200,230,255,0.7);font-size:0.8rem">' + esc(s.contenido || '—') + '</span></div>' +
                     '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="font-size:0.65rem;color:rgba(200,230,255,0.25)">' + new Date(s.timestamp).toLocaleString() + '</span>' +
-                    (s.ip ? '<button onclick="adminBlockIP(\'' + s.ip + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:6px;color:#ff6688;padding:3px 10px;cursor:pointer;font-size:0.6rem;font-family:\'Inter\',sans-serif;">🔨 ' + s.ip + '</button>' : '') +
+                    (s.ip ? '<button onclick="adminBlockIP(\'' + esc(s.ip) + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:6px;color:#ff6688;padding:3px 10px;cursor:pointer;font-size:0.6rem;font-family:\'Inter\',sans-serif;">🔨 ' + esc(s.ip) + '</button>' : '') +
                     '</div>' +
                     '</div>' +
                     '<div style="display:flex;gap:6px;flex-shrink:0;">' +
@@ -1329,7 +1532,7 @@
             adminStats.innerHTML =
                 '<div><div>' + adminAllSubs.length + '</div><div>Solicitudes</div></div>' +
                 '<div><div id="adminViewsCount">0</div><div>Vistas</div></div>';
-            fetch(CONFIG.API_BASE + '/api/admin/stats?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
+            apiFetch(CONFIG.API_BASE + '/api/admin/stats').then(r => r.json()).then(d => {
                 document.getElementById('adminViewsCount').textContent = d.views;
             }).catch(() => {});
         }
@@ -1337,16 +1540,16 @@
         window.adminGoPage = function(p) { adminPageNum = p; renderSubs(); };
         window.adminDelete = function(id) {
             if (!confirm('Eliminar esta solicitud?')) return;
-            fetch(CONFIG.API_BASE + '/api/admin/submissions/' + id + '?key=' + CONFIG.ADMIN_KEY, { method: 'DELETE' })
+            apiFetch(CONFIG.API_BASE + '/api/admin/submissions/' + id, { method: 'DELETE' })
                 .then(r => r.json()).then(() => loadSubs(adminSearch.value)).catch(() => {});
         };
         window.adminToggleRead = function(id) {
-            fetch(CONFIG.API_BASE + '/api/admin/submissions/' + id + '/read?key=' + CONFIG.ADMIN_KEY, { method: 'POST' })
+            apiFetch(CONFIG.API_BASE + '/api/admin/submissions/' + id + '/read', { method: 'POST' })
                 .then(r => r.json()).then(() => loadSubs(adminSearch.value)).catch(() => {});
         };
         window.adminBlockIP = function(ip) {
             if (!confirm('Bloquear IP: ' + ip + '?')) return;
-            fetch(CONFIG.API_BASE + '/api/admin/block?key=' + CONFIG.ADMIN_KEY, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ip }) })
+            apiFetch(CONFIG.API_BASE + '/api/admin/block', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ip }) })
                 .then(r => r.json()).then(() => { loadSubs(adminSearch.value); }).catch(() => {});
         };
         adminSearch?.addEventListener('input', function() {
@@ -1354,11 +1557,11 @@
         });
 
         function renderViews() {
-            fetch(CONFIG.API_BASE + '/api/admin/views?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
-                if (!d.length) { adminViews.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">Sin vistas</div>'; return; }
+            apiFetch(CONFIG.API_BASE + '/api/admin/views').then(r => r.json()).then(d => {
+                if (!d.length) { adminViews.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">' + _t('adminEmptyViews') + '</div>'; return; }
                 adminViews.innerHTML = d.slice(0, 50).map((v, i) =>
                     '<div style="padding:8px 0;border-bottom:1px solid rgba(0,255,200,0.03);display:flex;justify-content:space-between">' +
-                    '<span style="color:rgba(200,230,255,0.5);font-size:0.8rem">' + (v.pais || 'Desconocido') + '</span>' +
+                    '<span style="color:rgba(200,230,255,0.5);font-size:0.8rem">' + esc(v.pais || 'Desconocido') + '</span>' +
                     '<span style="color:rgba(200,230,255,0.2);font-size:0.65rem">' + new Date(v.timestamp).toLocaleString() + '</span>' +
                     '</div>'
                 ).join('');
@@ -1366,7 +1569,7 @@
         }
 
         function renderChart() {
-            fetch(CONFIG.API_BASE + '/api/admin/views?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
+            apiFetch(CONFIG.API_BASE + '/api/admin/views').then(r => r.json()).then(d => {
                 const counts = {};
                 let max = 0;
                 d.forEach(v => { const p = v.pais || 'Desconocido'; counts[p] = (counts[p] || 0) + 1; if (counts[p] > max) max = counts[p]; });
@@ -1375,7 +1578,7 @@
                 adminChart.innerHTML = '<div style="font-size:0.85rem;font-weight:600;color:rgba(200,230,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;"><i class="fa-solid fa-chart-bar"></i> Visitas por país</div>' +
                     entries.map(([pais, count]) =>
                         '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">' +
-                        '<span style="font-size:0.75rem;color:rgba(200,230,255,0.6);min-width:100px;text-align:right;">' + pais + '</span>' +
+                        '<span style="font-size:0.75rem;color:rgba(200,230,255,0.6);min-width:100px;text-align:right;">' + esc(pais) + '</span>' +
                         '<div style="flex:1;height:18px;background:rgba(0,15,25,0.5);border-radius:6px;overflow:hidden;">' +
                         '<div style="height:100%;width:' + Math.round((count / max) * 100) + '%;background:linear-gradient(90deg,#00ffc8,#00aaff);border-radius:6px;transition:width 0.5s;"></div>' +
                         '</div>' +
@@ -1386,11 +1589,11 @@
         }
 
         function loadBlocked() {
-            fetch(CONFIG.API_BASE + '/api/admin/blocked?key=' + CONFIG.ADMIN_KEY).then(r => r.json()).then(d => {
-                if (!d.length) { adminBlocked.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">Sin IPs bloqueadas</div>'; return; }
+            apiFetch(CONFIG.API_BASE + '/api/admin/blocked').then(r => r.json()).then(d => {
+                if (!d.length) { adminBlocked.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">' + _t('adminEmptyBlocked') + '</div>'; return; }
                 adminBlocked.innerHTML = d.map(ip =>
                     '<div style="display:flex;justify-content:space-between;align-items:center;padding:14px;margin-bottom:8px;background:rgba(0,15,25,0.4);border-radius:10px;border:1px solid rgba(255,68,102,0.1);">' +
-                    '<span style="color:rgba(200,230,255,0.6);font-size:0.85rem;font-family:monospace;">' + ip + '</span>' +
+                    '<span style="color:rgba(200,230,255,0.6);font-size:0.85rem;font-family:monospace;">' + esc(ip) + '</span>' +
                     '<button onclick="adminUnblock(\'' + ip + '\')" style="background:rgba(255,68,102,0.15);border:none;border-radius:8px;color:#ff6688;padding:8px 16px;cursor:pointer;font-size:0.8rem;font-family:\'Inter\',sans-serif;">Desbanear</button>' +
                     '</div>'
                 ).join('');
@@ -1398,20 +1601,61 @@
         }
 
         window.adminUnblock = function(ip) {
-            fetch(CONFIG.API_BASE + '/api/admin/unblock?key=' + CONFIG.ADMIN_KEY, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ip }) })
+            apiFetch(CONFIG.API_BASE + '/api/admin/unblock', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ip }) })
                 .then(r => r.json()).then(() => loadBlocked()).catch(() => {});
         };
 
         adminLoginBtn?.addEventListener('click', () => {
-            if (adminPwd.value === CONFIG.ADMIN_KEY) {
+            if (adminPwd.value === CONFIG.ADMIN_KEY || adminPwdGmail.value === _gm()) {
                 adminLoginSection.style.display = 'none';
                 adminPanelSection.style.display = 'flex';
                 loadAdminData();
             } else {
-                adminPwdError.style.display = 'block';
+                showToast(_t('adminPwdError'), 'error');
             }
         });
         adminPwd?.addEventListener('keydown', e => { if (e.key === 'Enter') adminLoginBtn.click(); });
+        adminPwdGmail?.addEventListener('keydown', e => { if (e.key === 'Enter') adminLoginBtn.click(); });
+
+        // --- Passwords gate ---
+        adminPwdGateBtn?.addEventListener('click', () => {
+            if (adminPwdGateInput.value === CONFIG.ADMIN_KEY || adminPwdGateInput2.value === _gm()) {
+                adminPwdGateError.textContent = '';
+                adminPwdGate.style.display = 'none';
+                adminPwdVault.style.display = 'block';
+                loadPasswords();
+            } else {
+                showToast(_t('adminPwdGateError'), 'error');
+            }
+        });
+        adminPwdGateInput?.addEventListener('keydown', e => { if (e.key === 'Enter') adminPwdGateBtn.click(); });
+        adminPwdGateInput2?.addEventListener('keydown', e => { if (e.key === 'Enter') adminPwdGateBtn.click(); });
+
+        function loadPasswords() {
+            apiFetch(CONFIG.API_BASE + '/api/admin/passwords').then(r => r.json()).then(d => {
+                if (!d.length) { adminPwdList.innerHTML = '<div style="color:rgba(200,230,255,0.2);padding:20px;text-align:center">' + _t('adminEmptyPwds') + '</div>'; return; }
+                adminPwdList.innerHTML = d.map(p =>
+                    '<div style="display:flex;justify-content:space-between;align-items:center;padding:14px;margin-bottom:8px;background:rgba(0,15,25,0.4);border-radius:10px;border:1px solid rgba(255,215,0,0.08);">' +
+                    '<div><div style="font-size:0.8rem;color:rgba(200,230,255,0.7);margin-bottom:2px;">' + esc(p.label) + '</div>' +
+                    '<div style="font-size:0.75rem;color:#ffd700;font-family:monospace;">' + esc(p.value) + '</div></div>' +
+                    '<button onclick="adminDeletePwd(' + p.id + ')" style="background:rgba(255,68,102,0.15);border:none;border-radius:6px;color:#ff6688;padding:6px 12px;cursor:pointer;font-size:0.75rem;font-family:\'Inter\',sans-serif;"><i class="fa-solid fa-trash-can"></i></button>' +
+                    '</div>'
+                ).join('');
+            }).catch(() => { showToast('Error al cargar contraseñas', 'error'); });
+        }
+
+        window.adminDeletePwd = function(id) {
+            apiFetch(CONFIG.API_BASE + '/api/admin/passwords/' + id, { method: 'DELETE' })
+                .then(r => r.json()).then(() => { showToast('Contraseña eliminada', 'success'); loadPasswords(); }).catch(() => {});
+        };
+
+        adminPwdAddBtn?.addEventListener('click', () => {
+            const label = adminPwdNewLabel.value.trim();
+            const value = adminPwdNewValue.value.trim();
+            if (!label || !value) { showToast('Completa ambos campos', 'error'); return; }
+            apiFetch(CONFIG.API_BASE + '/api/admin/passwords', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ label, value }) })
+                .then(r => r.json()).then(() => { adminPwdNewLabel.value = ''; adminPwdNewValue.value = ''; showToast('Contraseña guardada', 'success'); loadPasswords(); }).catch(() => {});
+        });
 
         // --- Reviews ---
         const reviewsPage = document.getElementById('reviewsPage');
@@ -1443,7 +1687,7 @@
                     reviewsStarsBig.textContent = '☆☆☆☆☆';
                 }
                 reviewsList.innerHTML = d.length
-                    ? d.map(r => '<div class="review-card"><div class="rc-stars">' + '⭐'.repeat(r.stars) + '</div><div class="rc-name">' + r.name + '</div>' + (r.text ? '<div class="rc-text">' + r.text + '</div>' : '') + '</div>').join('')
+                    ? d.map(r => '<div class="review-card"><div class="rc-stars">' + '⭐'.repeat(r.stars) + '</div><div class="rc-name">' + esc(r.name) + '</div>' + (r.text ? '<div class="rc-text">' + esc(r.text) + '</div>' : '') + '</div>').join('')
                     : '<div class="reviews-empty">Sin valoraciones aún</div>';
             }).catch(() => {
                 reviewsList.innerHTML = '<div class="reviews-empty" style="color:rgba(200,230,255,0.2);">Sin conexión al servidor</div>';
@@ -1469,40 +1713,36 @@
             });
         });
 
-        reviewSubmitBtn.addEventListener('click', () => {
+        reviewSubmitBtn?.addEventListener('click', () => {
             const name = reviewName.value.trim();
-            if (!name) { reviewFormMsg.textContent = 'Escribe tu nombre'; reviewFormMsg.style.color = '#ff4466'; return; }
-            if (!reviewStars) { reviewFormMsg.textContent = 'Selecciona una puntuación'; reviewFormMsg.style.color = '#ff4466'; return; }
-            reviewFormMsg.textContent = 'Enviando...'; reviewFormMsg.style.color = 'rgba(200,230,255,0.3)';
+            if (!name) { showToast('Escribe tu nombre', 'error'); return; }
+            if (!reviewStars) { showToast('Selecciona una puntuación', 'error'); return; }
             fetch(CONFIG.API_BASE + '/api/reviews', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, stars: reviewStars, text: reviewText.value.trim() })
             }).then(r => r.json()).then(() => {
-                reviewFormMsg.textContent = '¡Valoración enviada!'; reviewFormMsg.style.color = '#00ffc8';
+                showToast('¡Valoración enviada!', 'success');
                 reviewName.value = ''; reviewText.value = ''; reviewStars = 0;
                 reviewStarsInput.querySelectorAll('i').forEach(s => { s.className = 'fa-regular fa-star'; s.classList.remove('active'); });
                 loadReviews();
-                setTimeout(() => reviewFormMsg.textContent = '', 3000);
-            }).catch(() => { reviewFormMsg.textContent = 'Error al enviar'; reviewFormMsg.style.color = '#ff4466'; });
+            }).catch(() => { showToast('Error al enviar', 'error'); });
         });
 
         adminReviewDeleteBtn?.addEventListener('click', () => {
             const name = adminReviewName.value.trim();
-            if (!name) { adminReviewMsg.textContent = 'Escribe el nombre exacto'; return; }
-            adminReviewMsg.textContent = 'Buscando y eliminando...';
-            fetch(CONFIG.API_BASE + '/api/admin/reviews?key=' + CONFIG.ADMIN_KEY)
+            if (!name) { showToast('Escribe el nombre exacto', 'error'); return; }
+            apiFetch(CONFIG.API_BASE + '/api/admin/reviews')
                 .then(r => r.json()).then(reviews => {
                     const match = reviews.find(r => r.name.toLowerCase() === name.toLowerCase());
-                    if (!match) { adminReviewMsg.textContent = 'No se encontró esa valoración'; return; }
-                    fetch(CONFIG.API_BASE + '/api/admin/reviews/' + match.id + '?key=' + CONFIG.ADMIN_KEY, { method: 'DELETE' })
+                    if (!match) { showToast('No se encontró esa valoración', 'error'); return; }
+                    apiFetch(CONFIG.API_BASE + '/api/admin/reviews/' + match.id, { method: 'DELETE' })
                         .then(r => r.json()).then(() => {
-                            adminReviewMsg.textContent = 'Valoración eliminada';
+                            showToast('Valoración eliminada', 'success');
                             adminReviewName.value = '';
                             loadReviews();
-                            setTimeout(() => adminReviewMsg.textContent = '', 3000);
-                        }).catch(() => { adminReviewMsg.textContent = 'Error al eliminar'; });
-                }).catch(() => { adminReviewMsg.textContent = 'Error al buscar'; });
+                        }).catch(() => { showToast('Error al eliminar', 'error'); });
+                }).catch(() => { showToast('Error al buscar', 'error'); });
         });
 
         const reviewsAddBtn = document.getElementById('reviewsAddBtn');
@@ -1542,8 +1782,8 @@
             if (enterBtn) enterBtn.style.display = 'none';
             if (statusEl) statusEl.style.display = 'none';
             if (pctEl) pctEl.textContent = '0%';
-            if (barFill) barFill.style.width = '0%';
-            contentPage.style.display = 'none';
+            if (barFill) { barFill.style.width = '0%'; barFill.classList.remove('loading'); }
+            if (contentPage) contentPage.style.display = 'none';
             if (loader) {
                 loader.classList.remove('hidden');
                 loader.style.opacity = '1';
@@ -1588,7 +1828,7 @@
             setTimeout(() => {
                 reviewsPage.classList.remove('open');
                 reviewsPage.classList.remove('exit');
-                contentPage.style.display = 'block';
+                if (contentPage) contentPage.style.display = 'block';
                 document.body.style.overflow = '';
             }, 300);
         });
